@@ -86,7 +86,7 @@ const FormulationRepository = {
         image: "https://lh3.googleusercontent.com/aida/ADBb0uigGB5WW0LIbX0xq14r4l-2FZ6ElkuJPiZMY2MwPD4ZVEhJDxbgJK0oASvJBdAfZJnK3m0DQ0mR_aQhAVbgp9XsObdxDcGTZUOBO9kzIa8e7NaZIsqWP4Bh6dKb5svlFrA9_EvIxTfU0O-qkUC0F42_ihbSM3eUdy_YQP5EUaypkGJjdbkrv_zU6I6Rac8-1bnJAERCpj44oBS0mIF725QXxxCrGcNJlmBU1vNWzYVjjA9fwsSN1_mUNg",
         statBio: "94%",
         statStage: "Approved",
-        statRegulatory: "GxP Certified",
+        statRegulatory: "WHO-GMP Sourced",
         composition: [
             { name: "Proteolytic Enzyme Matrix", desc: "Gently digests damaged proteins on epidermal surfaces, preparing the field for repair.", role: "Epidermal Debridement" },
             { name: "Centella Asiatica Peptide", desc: "A powerful botanical signaling compound that speeds up fibroblast synthesis significantly.", role: "Fibroblast Triggers" },
@@ -419,7 +419,7 @@ class PortalRouter {
                         <span class="font-mono text-xs font-semibold text-teal-premium uppercase tracking-widest block">Medical Professionals Portal</span>
                         <h2 class="font-display text-2xl md:text-3xl font-extrabold text-navy-deep dark:text-white leading-tight">Healthcare Professional Enquiry</h2>
                         <p class="text-sm md:text-base text-navy-deep/70 dark:text-[#eff1f3]/70 leading-relaxed">
-                            Access peer-reviewed clinical studies, comparative trials, and GxP dosage guidelines for <strong>${data.title}</strong>. Our clinical research team is available to coordinate institutional requests.
+                            Access peer-reviewed clinical studies, comparative trials, and standard dosage guidelines for <strong>${data.title}</strong>. Our product support desk is available to coordinate institutional requests.
                         </p>
                         <ul class="space-y-3.5 pt-2">
                             <li class="flex items-center gap-3.5">
