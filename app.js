@@ -667,6 +667,58 @@ class InterfacePolish {
     }
 }
 
+// 6.5 Premium Count-Up Animation Engine
+class CountUpController {
+    constructor() {
+        this.elements = document.querySelectorAll(".count-up");
+        if (this.elements.length > 0) {
+            this.initObserver();
+        }
+    }
+
+    initObserver() {
+        const options = {
+            root: null,
+            threshold: 0.15
+        };
+
+        const observer = new IntersectionObserver((entries, obs) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    this.animateCount(entry.target);
+                    obs.unobserve(entry.target);
+                }
+            });
+        }, options);
+
+        this.elements.forEach(el => observer.observe(el));
+    }
+
+    animateCount(el) {
+        const target = parseInt(el.getAttribute("data-target"), 10) || 5;
+        const suffix = el.getAttribute("data-suffix") || "";
+        const duration = 1500; // ms transition duration for premium feel
+        const start = parseInt(el.getAttribute("data-start") || "1", 10);
+        const startTime = performance.now();
+
+        const step = (now) => {
+            const progress = Math.min((now - startTime) / duration, 1);
+            // Ease out quad formula for smooth decelerating counting speed
+            const easeProgress = progress * (2 - progress);
+            const current = Math.floor(easeProgress * (target - start) + start);
+            el.textContent = current + suffix;
+            
+            if (progress < 1) {
+                requestAnimationFrame(step);
+            } else {
+                el.textContent = target + suffix;
+            }
+        };
+
+        requestAnimationFrame(step);
+    }
+}
+
 // 7. System Initialization
 document.addEventListener("DOMContentLoaded", () => {
     new ProteomicsBackground("molecular-canvas");
@@ -674,4 +726,6 @@ document.addEventListener("DOMContentLoaded", () => {
     new ValidationEngine();
     new CatalogController();
     new InterfacePolish();
+    new CountUpController();
 });
+

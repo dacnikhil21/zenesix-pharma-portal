@@ -62,7 +62,7 @@
             
             <!-- Logo Section -->
             <a href="#home" class="flex items-center gap-3 group">
-                <img src="logo.png" alt="Zenesix Logo" class="h-12 w-auto object-contain transition-transform duration-300 group-hover:scale-[1.02]"/>
+                <img src="logo.png" alt="Zenesix Logo" class="logo-blend h-12 w-auto object-contain transition-transform duration-300 group-hover:scale-[1.02]"/>
             </a>
             
             <!-- Desktop Navigation Links -->
@@ -281,12 +281,12 @@
                         <div class="lg:col-span-5 grid grid-cols-2 gap-6 w-full items-start">
                             <div class="glass-panel p-6 rounded-[24px] border border-[#c4c6cf]/20 stat-hover shadow-md flex flex-col items-start dark:border-white/5">
                                 <span class="material-symbols-outlined text-teal-premium text-3xl mb-1" style="font-variation-settings: 'FILL' 1;">workspace_premium</span>
-                                <span class="font-display text-4xl font-extrabold text-navy-deep dark:text-white leading-none">5</span>
+                                <span class="font-display text-4xl font-extrabold text-navy-deep dark:text-white leading-none count-up" data-target="5">1</span>
                                 <p class="font-mono text-[10px] font-bold text-navy-deep/50 dark:text-[#eff1f3]/50 uppercase tracking-widest mt-2">Established Brands</p>
                             </div>
                             <div class="glass-panel p-6 rounded-[24px] border border-[#c4c6cf]/20 stat-hover shadow-md flex flex-col items-start dark:border-white/5">
                                 <span class="material-symbols-outlined text-[#388ac4] text-3xl mb-1" style="font-variation-settings: 'FILL' 1;">medical_services</span>
-                                <span class="font-display text-4xl font-extrabold text-[#388ac4] leading-none">5</span>
+                                <span class="font-display text-4xl font-extrabold text-[#388ac4] leading-none count-up" data-target="5">1</span>
                                 <p class="font-mono text-[10px] font-bold text-navy-deep/50 dark:text-[#eff1f3]/50 uppercase tracking-widest mt-2">Therapeutic Sectors</p>
                             </div>
                         </div>
@@ -304,7 +304,7 @@
                     </div>
                     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
                         <!-- Quality -->
-                        <div class="glass-panel p-8 rounded-3xl glass-panel-hover flex flex-col gap-6">
+                        <div class="glass-panel p-8 rounded-3xl glass-panel-hover flex flex-col gap-6 animate-fade-in-up">
                             <div class="w-12 h-12 rounded-2xl bg-teal-premium/10 flex items-center justify-center text-teal-premium shadow-inner">
                                 <span class="material-symbols-outlined text-2xl">award_star</span>
                             </div>
@@ -312,7 +312,7 @@
                             <p class="text-[15px] text-navy-deep/75 leading-relaxed dark:text-[#eff1f3]/70">Every product is sourced from WHO-GMP approved partner companies that adhere to strict quality control, ensuring safety and reliability.</p>
                         </div>
                         <!-- Innovation -->
-                        <div class="glass-panel p-8 rounded-3xl glass-panel-hover flex flex-col gap-6">
+                        <div class="glass-panel p-8 rounded-3xl glass-panel-hover flex flex-col gap-6 animate-fade-in-up-2">
                             <div class="w-12 h-12 rounded-2xl bg-[#388ac4]/10 flex items-center justify-center text-[#388ac4] shadow-inner">
                                 <span class="material-symbols-outlined text-2xl">biotech</span>
                             </div>
@@ -320,7 +320,7 @@
                             <p class="text-sm text-navy-deep/75 leading-relaxed dark:text-[#eff1f3]/70">Promoting products through evidence-based research and scientific communication with medical specialists.</p>
                         </div>
                         <!-- Standards -->
-                        <div class="glass-panel p-8 rounded-3xl glass-panel-hover flex flex-col gap-6">
+                        <div class="glass-panel p-8 rounded-3xl glass-panel-hover flex flex-col gap-6 animate-fade-in-up-3">
                             <div class="w-12 h-12 rounded-2xl bg-teal-premium/10 flex items-center justify-center text-teal-premium shadow-inner">
                                 <span class="material-symbols-outlined text-2xl">gavel</span>
                             </div>
@@ -328,7 +328,7 @@
                             <p class="text-sm text-navy-deep/75 leading-relaxed dark:text-[#eff1f3]/70">Formulations are supplied in complete adherence to regulatory standards and ethical distribution practices.</p>
                         </div>
                         <!-- Commitment -->
-                        <div class="glass-panel p-8 rounded-3xl glass-panel-hover flex flex-col gap-6">
+                        <div class="glass-panel p-8 rounded-3xl glass-panel-hover flex flex-col gap-6 animate-fade-in-up-4">
                             <div class="w-12 h-12 rounded-2xl bg-[#388ac4]/10 flex items-center justify-center text-[#388ac4] shadow-inner">
                                 <span class="material-symbols-outlined text-2xl">handshake</span>
                             </div>
@@ -339,75 +339,6 @@
                 </div>
             </section>
 
-            <!-- Featured Product Showcase -->
-            <section class="py-24 bg-white dark:bg-surface-dark/40">
-                <div class="max-w-7xl mx-auto px-4 md:px-8">
-                    <div class="flex justify-between items-end mb-16">
-                        <div class="space-y-4">
-                            <span class="font-mono text-[11px] font-bold uppercase tracking-widest text-teal-premium">Featured Products</span>
-                            <h3 class="font-display font-extrabold text-navy-deep dark:text-white tracking-tight" style="font-size:clamp(2rem,4vw,3rem);">Our Product Portfolio</h3>
-                            <p class="text-navy-deep/60 dark:text-[#eff1f3]/60">Quality formulations across key therapeutic areas.</p>
-                        </div>
-                        <a class="text-teal-premium font-bold flex items-center gap-2 font-display text-sm tracking-wide teal-hover-expand" href="#products">
-                            View Full Catalog 
-                            <span class="material-symbols-outlined text-sm align-middle">arrow_forward</span>
-                        </a>
-                    </div>
-                    
-                    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                        <!-- Axogain -->
-                        <div class="glass-panel rounded-[30px] overflow-hidden group hover:shadow-2xl hover:border-teal-premium/20 transition-all duration-300 flex flex-col">
-                            <div class="h-60 relative overflow-hidden bg-surface-container/30">
-                                <img src="images/axogain.png" alt="Axogain Product" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
-                                <div class="absolute top-4 left-4 bg-navy-deep/90 backdrop-blur-md text-white font-mono text-[10px] tracking-widest uppercase px-3.5 py-1.5 rounded-full font-bold">NEUROLOGY</div>
-                            </div>
-                            <div class="p-8 flex-1 flex flex-col justify-between gap-6">
-                                <div>
-                                    <h4 class="font-display text-[1.4rem] font-extrabold text-navy-deep dark:text-white tracking-tight">Axogain</h4>
-                                    <p class="text-sm text-navy-deep/70 mt-3 leading-relaxed dark:text-[#eff1f3]/70">High-bioavailability neurotrophic support solution designed to accelerate nerve health and myelin sheath restoration.</p>
-                                </div>
-                                <a href="#product/axogain" class="w-full text-center border-2 border-navy-deep/20 py-3 rounded-2xl hover:bg-navy-deep hover:text-white font-bold font-display text-xs tracking-wider transition-all duration-300 dark:border-white/10 dark:hover:bg-teal-premium dark:hover:bg-teal-premium">
-                                    Details &amp; Formulations
-                                </a>
-                            </div>
-                        </div>
-                        
-                        <!-- Crandrop -->
-                        <div class="glass-panel rounded-[30px] overflow-hidden group hover:shadow-2xl hover:border-teal-premium/20 transition-all duration-300 flex flex-col">
-                            <div class="h-60 relative overflow-hidden bg-surface-container/30">
-                                <img src="images/crandrop.png" alt="Crandrop Product" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
-                                <div class="absolute top-4 left-4 bg-teal-premium/90 backdrop-blur-md text-white font-mono text-[10px] tracking-widest uppercase px-3.5 py-1.5 rounded-full font-bold">URINARY HEALTH</div>
-                            </div>
-                            <div class="p-8 flex-1 flex flex-col justify-between gap-6">
-                                <div>
-                                    <h4 class="font-display text-[1.4rem] font-extrabold text-navy-deep dark:text-white tracking-tight">Crandrop</h4>
-                                    <p class="text-sm text-navy-deep/70 mt-3 leading-relaxed dark:text-[#eff1f3]/70">High-potency botanical extract syrup formulated for complete urinary tract care with a glycemic-neutral carrier.</p>
-                                </div>
-                                <a href="#product/crandrop" class="w-full text-center border-2 border-navy-deep/20 py-3 rounded-2xl hover:bg-navy-deep hover:text-white font-bold font-display text-xs tracking-wider transition-all duration-300 dark:border-white/10 dark:hover:bg-teal-premium dark:hover:bg-teal-hover">
-                                    Details &amp; Formulations
-                                </a>
-                            </div>
-                        </div>
-
-                        <!-- Flexivora -->
-                        <div class="glass-panel rounded-[30px] overflow-hidden group hover:shadow-2xl hover:border-teal-premium/20 transition-all duration-300 flex flex-col">
-                            <div class="h-60 relative overflow-hidden bg-surface-container/30">
-                                <img src="images/flexivora.png" alt="Flexivora Product" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
-                                <div class="absolute top-4 left-4 bg-[#388ac4]/90 backdrop-blur-md text-white font-mono text-[10px] tracking-widest uppercase px-3.5 py-1.5 rounded-full font-bold">JOINT CARE</div>
-                            </div>
-                            <div class="p-8 flex-1 flex flex-col justify-between gap-6">
-                                <div>
-                                    <h4 class="font-display text-[1.4rem] font-extrabold text-navy-deep dark:text-white tracking-tight">Flexivora</h4>
-                                    <p class="text-sm text-navy-deep/70 mt-3 leading-relaxed dark:text-[#eff1f3]/70">Clinical strength joint care capsules utilizing highly bio-available collagen matrices to restore natural mobility.</p>
-                                </div>
-                                <a href="#product/flexivora" class="w-full text-center border-2 border-navy-deep/20 py-3 rounded-2xl hover:bg-navy-deep hover:text-white font-bold font-display text-xs tracking-wider transition-all duration-300 dark:border-white/10 dark:hover:bg-teal-premium dark:hover:bg-teal-premium">
-                                    Details &amp; Formulations
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
 
             <!-- Interactive Newsletter Subscription -->
             <section class="max-w-7xl mx-auto px-4 md:px-8 pb-16 md:pb-24">
@@ -461,9 +392,9 @@
                                         <!-- 1. Crandrop -->
                     <article class="glass-card rounded-[32px] overflow-hidden flex flex-col group border border-[#c4c6cf]/20" data-category="urology" data-name="crandrop">
                         <div class="relative overflow-hidden bg-surface-container/20" style="height:280px;">
-                            <img src="images/crandrop.png" alt="Crandrop Product" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" style="filter:brightness(1.08) contrast(1.12) saturate(1.1);" />
+                            <img src="images/crandrop.png" alt="Crandrop Product" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
                             <div class="absolute bottom-3 right-3 w-20 h-20 rounded-2xl overflow-hidden glass-panel p-1.5 shadow-md border border-white/50 bg-white/70 dark:bg-[#0a0f18]/80">
-                                <img src="images/crandrop.png" alt="Crandrop Product" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" style="filter:brightness(1.08) contrast(1.12) saturate(1.1);" />
+                                <img src="images/crandrop.png" alt="Crandrop Product" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
                             </div>
                             <div class="absolute top-4 left-4">
                                 <span class="bg-teal-premium text-white px-4 py-1.5 rounded-full font-mono text-[10px] tracking-widest font-bold uppercase shadow-sm">Urology</span>
@@ -475,7 +406,7 @@
                                 <p class="text-[15px] text-navy-deep/70 leading-relaxed dark:text-[#eff1f3]/70">High-potency botanical extract syrup formulated for comprehensive urinary tract support and glycemic-neutral patient compatibility.</p>
                             </div>
                             <div class="flex gap-4">
-                                <a href="#product/crandrop" class="flex-grow bg-navy-deep text-white font-display text-[13px] font-bold tracking-wide py-4 rounded-2xl text-center shadow-lg transition-all hover:bg-navy-light hover:translate-y-[-1px] active:scale-95 dark:bg-teal-premium dark:hover:bg-teal-hover">Learn More</a>
+                                <a href="#product/crandrop" class="flex-grow bg-navy-deep text-white font-display text-[13px] font-bold tracking-wide py-4 rounded-2xl text-center shadow-lg hover:bg-navy-light hover:translate-y-[-1px] active:scale-95 premium-btn premium-btn-animate premium-btn-pulse dark:bg-teal-premium dark:hover:bg-teal-hover">Learn More</a>
                                 <a href="https://wa.me/919515436426?text=Hello%20Zenesix,%20I%20am%20interested%20in%20Crandrop%20formulation." target="_blank" rel="noopener" class="border border-navy-deep/20 text-navy-deep font-display text-xs font-bold tracking-wider px-5 py-3.5 rounded-2xl text-center hover:bg-navy-deep/5 transition-all dark:border-white/10 dark:text-white dark:hover:bg-white/5 flex items-center justify-center gap-2">
                                     <span class="material-symbols-outlined text-base">chat</span>
                                 </a>
@@ -486,9 +417,9 @@
                     <!-- 2. Flexivora -->
                     <article class="glass-card rounded-[32px] overflow-hidden flex flex-col group border border-[#c4c6cf]/20" data-category="joints" data-name="flexivora">
                         <div class="relative overflow-hidden bg-surface-container/20" style="height:280px;">
-                            <img src="images/flexivora.png" alt="Flexivora Product" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" style="filter:brightness(1.08) contrast(1.12) saturate(1.1);" />
+                            <img src="images/flexivora.png" alt="Flexivora Product" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
                             <div class="absolute bottom-3 right-3 w-20 h-20 rounded-2xl overflow-hidden glass-panel p-1.5 shadow-md border border-white/50 bg-white/70 dark:bg-[#0a0f18]/80">
-                                <img src="images/flexivora.png" alt="Flexivora Product" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" style="filter:brightness(1.08) contrast(1.12) saturate(1.1);" />
+                                <img src="images/flexivora.png" alt="Flexivora Product" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
                             </div>
                             <div class="absolute top-4 left-4">
                                 <span class="bg-[#388ac4] text-white px-4 py-1.5 rounded-full font-mono text-[10px] tracking-widest font-bold uppercase shadow-sm">Joint Care</span>
@@ -500,7 +431,7 @@
                                 <p class="text-[15px] text-navy-deep/70 leading-relaxed dark:text-[#eff1f3]/70">Clinical strength joint support capsules utilizing advanced bio-available collagen and micro-mineral complexes for mobility recovery.</p>
                             </div>
                             <div class="flex gap-4">
-                                <a href="#product/flexivora" class="flex-grow bg-navy-deep text-white font-display text-[13px] font-bold tracking-wide py-4 rounded-2xl text-center shadow-lg transition-all hover:bg-navy-light hover:translate-y-[-1px] active:scale-95 dark:bg-teal-premium dark:hover:bg-teal-hover">Learn More</a>
+                                <a href="#product/flexivora" class="flex-grow bg-navy-deep text-white font-display text-[13px] font-bold tracking-wide py-4 rounded-2xl text-center shadow-lg hover:bg-navy-light hover:translate-y-[-1px] active:scale-95 premium-btn premium-btn-animate premium-btn-pulse dark:bg-teal-premium dark:hover:bg-teal-hover">Learn More</a>
                                 <a href="https://wa.me/919515436426?text=Hello%20Zenesix,%20I%20am%20interested%20in%20Flexivora%20formulation." target="_blank" rel="noopener" class="border border-navy-deep/20 text-navy-deep font-display text-xs font-bold tracking-wider px-5 py-3.5 rounded-2xl text-center hover:bg-navy-deep/5 transition-all dark:border-white/10 dark:text-white dark:hover:bg-white/5 flex items-center justify-center gap-2">
                                     <span class="material-symbols-outlined text-base">chat</span>
                                 </a>
@@ -511,9 +442,9 @@
                     <!-- 3. Histoheal -->
                     <article class="glass-card rounded-[32px] overflow-hidden flex flex-col group border border-[#c4c6cf]/20" data-category="derma" data-name="histoheal">
                         <div class="relative overflow-hidden bg-surface-container/20" style="height:280px;">
-                            <img src="images/histoheal.png" alt="Histoheal Product" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" style="filter:brightness(1.08) contrast(1.12) saturate(1.1);" />
+                            <img src="images/histoheal.png" alt="Histoheal Product" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
                             <div class="absolute bottom-3 right-3 w-20 h-20 rounded-2xl overflow-hidden glass-panel p-1.5 shadow-md border border-white/50 bg-white/70 dark:bg-[#0a0f18]/80">
-                                <img src="images/histoheal.png" alt="Histoheal Product" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" style="filter:brightness(1.08) contrast(1.12) saturate(1.1);" />
+                                <img src="images/histoheal.png" alt="Histoheal Product" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
                             </div>
                             <div class="absolute top-4 left-4">
                                 <span class="bg-teal-premium text-white px-4 py-1.5 rounded-full font-mono text-[10px] tracking-widest font-bold uppercase shadow-sm">Dermatology</span>
@@ -525,7 +456,7 @@
                                 <p class="text-[15px] text-navy-deep/70 leading-relaxed dark:text-[#eff1f3]/70">Advanced topical regenerative cream designed for accelerated tissue repair and post-operative skin barrier recovery.</p>
                             </div>
                             <div class="flex gap-4">
-                                <a href="#product/histoheal" class="flex-grow bg-navy-deep text-white font-display text-[13px] font-bold tracking-wide py-4 rounded-2xl text-center shadow-lg transition-all hover:bg-navy-light hover:translate-y-[-1px] active:scale-95 dark:bg-teal-premium dark:hover:bg-teal-hover">Learn More</a>
+                                <a href="#product/histoheal" class="flex-grow bg-navy-deep text-white font-display text-[13px] font-bold tracking-wide py-4 rounded-2xl text-center shadow-lg hover:bg-navy-light hover:translate-y-[-1px] active:scale-95 premium-btn premium-btn-animate premium-btn-pulse dark:bg-teal-premium dark:hover:bg-teal-hover">Learn More</a>
                                 <a href="https://wa.me/919515436426?text=Hello%20Zenesix,%20I%20am%20interested%20in%20Histoheal%20formulation." target="_blank" rel="noopener" class="border border-navy-deep/20 text-navy-deep font-display text-xs font-bold tracking-wider px-5 py-3.5 rounded-2xl text-center hover:bg-navy-deep/5 transition-all dark:border-white/10 dark:text-white dark:hover:bg-white/5 flex items-center justify-center gap-2">
                                     <span class="material-symbols-outlined text-base">chat</span>
                                 </a>
@@ -536,9 +467,9 @@
                     <!-- 4. Axogain -->
                     <article class="glass-card rounded-[32px] overflow-hidden flex flex-col group border border-[#c4c6cf]/20" data-category="neuro" data-name="axogain">
                         <div class="relative overflow-hidden bg-surface-container/20" style="height:280px;">
-                            <img src="images/axogain.png" alt="Axogain Product" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" style="filter:brightness(1.08) contrast(1.12) saturate(1.1);" />
+                            <img src="images/axogain.png" alt="Axogain Product" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
                             <div class="absolute bottom-3 right-3 w-20 h-20 rounded-2xl overflow-hidden glass-panel p-1.5 shadow-md border border-white/50 bg-white/70 dark:bg-[#0a0f18]/80">
-                                <img src="images/axogain.png" alt="Axogain Product" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" style="filter:brightness(1.08) contrast(1.12) saturate(1.1);" />
+                                <img src="images/axogain.png" alt="Axogain Product" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
                             </div>
                             <div class="absolute top-4 left-4">
                                 <span class="bg-[#388ac4] text-white px-4 py-1.5 rounded-full font-mono text-[10px] tracking-widest font-bold uppercase shadow-sm">Neurology</span>
@@ -550,7 +481,7 @@
                                 <p class="text-[15px] text-navy-deep/70 leading-relaxed dark:text-[#eff1f3]/70">Next-generation neurotrophic support solution focusing on axonal integrity and cognitive resilience for patient populations.</p>
                             </div>
                             <div class="flex gap-4">
-                                <a href="#product/axogain" class="flex-grow bg-navy-deep text-white font-display text-[13px] font-bold tracking-wide py-4 rounded-2xl text-center shadow-lg transition-all hover:bg-navy-light hover:translate-y-[-1px] active:scale-95 dark:bg-teal-premium dark:hover:bg-teal-hover">Learn More</a>
+                                <a href="#product/axogain" class="flex-grow bg-navy-deep text-white font-display text-[13px] font-bold tracking-wide py-4 rounded-2xl text-center shadow-lg hover:bg-navy-light hover:translate-y-[-1px] active:scale-95 premium-btn premium-btn-animate premium-btn-pulse dark:bg-teal-premium dark:hover:bg-teal-hover">Learn More</a>
                                 <a href="https://wa.me/919515436426?text=Hello%20Zenesix,%20I%20am%20interested%20in%20Axogain%20formulation." target="_blank" rel="noopener" class="border border-navy-deep/20 text-navy-deep font-display text-xs font-bold tracking-wider px-5 py-3.5 rounded-2xl text-center hover:bg-navy-deep/5 transition-all dark:border-white/10 dark:text-white dark:hover:bg-white/5 flex items-center justify-center gap-2">
                                     <span class="material-symbols-outlined text-base">chat</span>
                                 </a>
@@ -561,9 +492,9 @@
                     <!-- 5. Velytra-Gel -->
                     <article class="glass-card rounded-[32px] overflow-hidden flex flex-col group border border-[#c4c6cf]/20" data-category="pain" data-name="velytra-gel">
                         <div class="relative overflow-hidden bg-surface-container/20" style="height:280px;">
-                            <img src="images/velytra-gel.png" alt="Velytra-Gel Product" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" style="filter:brightness(1.08) contrast(1.12) saturate(1.1);" />
+                            <img src="images/velytra-gel.png" alt="Velytra-Gel Product" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
                             <div class="absolute bottom-3 right-3 w-20 h-20 rounded-2xl overflow-hidden glass-panel p-1.5 shadow-md border border-white/50 bg-white/70 dark:bg-[#0a0f18]/80">
-                                <img src="images/velytra-gel.png" alt="Velytra-Gel Product" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" style="filter:brightness(1.08) contrast(1.12) saturate(1.1);" />
+                                <img src="images/velytra-gel.png" alt="Velytra-Gel Product" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
                             </div>
                             <div class="absolute top-4 left-4">
                                 <span class="bg-teal-premium text-white px-4 py-1.5 rounded-full font-mono text-[10px] tracking-widest font-bold uppercase shadow-sm">Pain Management</span>
@@ -575,7 +506,7 @@
                                 <p class="text-[15px] text-navy-deep/70 leading-relaxed dark:text-[#eff1f3]/70">Transdermal analgesic gel featuring a non-greasy rapid absorption matrix for localized inflammation and musculoskeletal pain relief.</p>
                             </div>
                             <div class="flex gap-4">
-                                <a href="#product/velytra-gel" class="flex-grow bg-navy-deep text-white font-display text-[13px] font-bold tracking-wide py-4 rounded-2xl text-center shadow-lg transition-all hover:bg-navy-light hover:translate-y-[-1px] active:scale-95 dark:bg-teal-premium dark:hover:bg-teal-hover">Learn More</a>
+                                <a href="#product/velytra-gel" class="flex-grow bg-navy-deep text-white font-display text-[13px] font-bold tracking-wide py-4 rounded-2xl text-center shadow-lg hover:bg-navy-light hover:translate-y-[-1px] active:scale-95 premium-btn premium-btn-animate premium-btn-pulse dark:bg-teal-premium dark:hover:bg-teal-hover">Learn More</a>
                                 <a href="https://wa.me/919515436426?text=Hello%20Zenesix,%20I%20am%20interested%20in%20Velytra-Gel%20formulation." target="_blank" rel="noopener" class="border border-navy-deep/20 text-navy-deep font-display text-xs font-bold tracking-wider px-5 py-3.5 rounded-2xl text-center hover:bg-navy-deep/5 transition-all dark:border-white/10 dark:text-white dark:hover:bg-white/5 flex items-center justify-center gap-2">
                                     <span class="material-symbols-outlined text-base">chat</span>
                                 </a>
@@ -626,15 +557,15 @@
                         
                         <div class="flex flex-wrap gap-8 border-t border-[#c4c6cf]/20 pt-8 dark:border-white/5">
                             <div>
-                                <span class="font-display text-3xl font-extrabold text-teal-premium">5</span>
+                                <span class="font-display text-3xl font-extrabold text-teal-premium count-up" data-target="5">1</span>
                                 <p class="font-mono text-[10px] font-bold text-navy-deep/50 dark:text-[#eff1f3]/50 uppercase tracking-widest mt-1">Established Brands</p>
                             </div>
                             <div>
-                                <span class="font-display text-3xl font-extrabold text-teal-premium">5</span>
+                                <span class="font-display text-3xl font-extrabold text-teal-premium count-up" data-target="5">1</span>
                                 <p class="font-mono text-[10px] font-bold text-navy-deep/50 dark:text-[#eff1f3]/50 uppercase tracking-widest mt-1">Clinical Sectors</p>
                             </div>
                             <div>
-                                <span class="font-display text-3xl font-extrabold text-teal-premium">100%</span>
+                                <span class="font-display text-3xl font-extrabold text-teal-premium count-up" data-target="100" data-suffix="%" data-start="70">70%</span>
                                 <p class="font-mono text-[10px] font-bold text-navy-deep/50 dark:text-[#eff1f3]/50 uppercase tracking-widest mt-1">Regulatory Compliant</p>
                             </div>
                         </div>
@@ -862,7 +793,7 @@
             
             <div class="space-y-6">
                 <div class="flex items-center gap-3">
-                    <img src="logo.png" alt="Zenesix Logo Footer" class="h-8 w-auto object-contain" style="filter: invert(1); mix-blend-mode: screen;"/>
+                    <img src="logo.png" alt="Zenesix Logo Footer" class="logo-blend h-8 w-auto object-contain"/>
                 </div>
                 <p class="text-sm text-white/60 leading-relaxed pr-6">
                     Quality-assured pharmaceutical and healthcare products distributed for a healthier community. Committed to providing access to trusted formulations.

@@ -493,19 +493,103 @@ section, header, footer { max-width: 100vw; }
 /* ── Scroll down fade-in for hero (mobile safe height) ──────────────────── */
 /* ── Mobile safe height removed ──────────────────── */
 
-/* ── Product Image Enhancement ────────────────────────────────────────────── */
+/* ── Product Image Enhancement (Smooth & High Clarity) ─────────────────────── */
 .glass-card img, 
 .glass-panel img,
 article img,
 #catalog-grid img,
 #detail-section img {
-    filter: contrast(1.08) brightness(1.04) saturate(1.02);
-    image-rendering: -webkit-optimize-contrast;
-    image-rendering: crisp-edges;
-    transition: filter 0.3s ease, transform 0.4s ease;
+    filter: contrast(1.06) brightness(1.03) saturate(1.04);
+    /* Restored high-quality browser anti-aliasing & smoothing */
+    image-rendering: auto; 
+    transition: filter 0.35s cubic-bezier(0.16, 1, 0.3, 1), transform 0.45s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .glass-card:hover img,
 .glass-panel:hover img {
-    filter: contrast(1.12) brightness(1.06) saturate(1.04);
+    filter: contrast(1.10) brightness(1.05) saturate(1.06);
+}
+
+/* ── Seamless Logo Background Removal ─────────────────────────────────────── */
+.logo-blend {
+    mix-blend-mode: multiply;
+    transition: filter 0.3s ease, mix-blend-mode 0.3s ease;
+}
+
+.dark .logo-blend {
+    filter: invert(1);
+    mix-blend-mode: screen;
+}
+
+/* ── Premium Animated Shimmer & Pulse Buttons ─────────────────────────────── */
+.premium-btn {
+    position: relative;
+    overflow: hidden;
+    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    box-shadow: 0 4px 14px rgba(12, 197, 183, 0.2);
+}
+
+.premium-btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -150%;
+    width: 60%;
+    height: 100%;
+    background: linear-gradient(
+        90deg,
+        transparent,
+        rgba(255, 255, 255, 0.35),
+        transparent
+    );
+    transform: skewX(-20deg);
+    pointer-events: none;
+}
+
+.premium-btn:hover {
+    transform: translateY(-2px) scale(1.015);
+    box-shadow: 0 8px 24px rgba(12, 197, 183, 0.35), 0 0 0 4px rgba(12, 197, 183, 0.15);
+}
+
+/* Continuous elegant shimmer sweep */
+@keyframes shimmer-sweep {
+    0% { left: -150%; }
+    40% { left: 150%; }
+    100% { left: 150%; }
+}
+
+.premium-btn-animate::before {
+    animation: shimmer-sweep 4s infinite cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* breathing glow pulse */
+@keyframes breathing-glow {
+    0%, 100% { box-shadow: 0 4px 14px rgba(12, 197, 183, 0.2); }
+    50% { box-shadow: 0 4px 22px rgba(12, 197, 183, 0.45); }
+}
+
+.premium-btn-pulse {
+    animation: breathing-glow 3s infinite ease-in-out;
+}
+
+/* ── Core Values Interactive Micro-Motion ─────────────────────────────────── */
+.glass-panel-hover {
+    transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1),
+                box-shadow 0.4s cubic-bezier(0.16, 1, 0.3, 1),
+                border-color 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.glass-panel-hover:hover {
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 20px 40px rgba(7, 43, 97, 0.08), 0 1px 3px rgba(0,0,0,0.02);
+    border-color: rgba(12, 197, 183, 0.35) !important;
+}
+
+.glass-panel-hover .material-symbols-outlined {
+    transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), color 0.3s ease;
+}
+
+.glass-panel-hover:hover .material-symbols-outlined {
+    transform: scale(1.15) rotate(6deg) translateY(-2px);
+    color: var(--teal) !important;
 }
