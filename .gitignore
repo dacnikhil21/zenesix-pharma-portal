@@ -1,0 +1,29 @@
+# Dependencies
+node_modules/
+
+# Vite build output
+dist/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Env files
+.env
+.env.local
+.env.*.local
+
+# Editor
+.vscode/
+.idea/
+
+# Temp scripts (one-off utility scripts)
+copy_image.js
+fix_broken_paths.js
+replace_paths.js
+replace_paths.py
+restore_and_split_css.js
+split_images.js
+apply_final_images.js
+final_polish.js
+upgrade_heroes.js

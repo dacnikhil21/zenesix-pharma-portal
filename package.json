@@ -1,0 +1,16 @@
+{
+  "name": "zenesix-pharma-portal",
+  "version": "1.0.0",
+  "description": "Zenesix Premium Pharmaceuticals Portal",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "vite": "^5.2.0"
+  },
+  "dependencies": {
+    "jimp": "^1.6.1"
+  }
+}
