@@ -8,6 +8,10 @@
     <!-- Meta Descriptions for SEO -->
     <meta name="description" content="Zenesix Pharmaceuticals is a trusted pharmaceutical and healthcare solutions company supplying quality formulations sourced from WHO GMP, ISO CERTIFIED, and GMP GLO CERTIFIED approved partner facilities."/>
     
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="favicon.png"/>
+    <link rel="apple-touch-icon" href="favicon.png"/>
+    
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet"/>
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
@@ -360,12 +364,17 @@
         <!-- 2. PRODUCTS VIEW                           -->
         <!-- ========================================== -->
         <div id="view-products" class="view-pane">
-            <section class="py-20 px-4 md:px-10 max-w-7xl mx-auto">
-                <div class="mb-16 space-y-5 text-left">
-                    <span class="font-mono text-[11px] font-bold uppercase tracking-widest text-teal-premium">Product Range</span>
-                    <h2 class="font-display font-extrabold text-navy-deep dark:text-white tracking-tight" style="font-size:clamp(2.5rem,5vw,3.75rem);">Our Formulations</h2>
-                    <p class="text-lg text-navy-deep/60 dark:text-[#eff1f3]/60 max-w-2xl leading-relaxed">Quality pharmaceutical formulations across multiple therapeutic areas, trusted by healthcare professionals.</p>
+            <!-- Products Page Hero Banner -->
+            <div class="relative w-full overflow-hidden" style="height: 380px;">
+                <img src="images/products-hero.png" alt="Zenesix Pharmaceuticals – Quality Formulations" class="w-full h-full object-cover object-center"/>
+                <div class="absolute inset-0" style="background: linear-gradient(110deg, rgba(7,43,97,0.85) 0%, rgba(7,43,97,0.55) 50%, rgba(7,43,97,0.25) 100%);"></div>
+                <div class="absolute inset-0 flex flex-col justify-center px-8 md:px-16 max-w-7xl mx-auto">
+                    <span class="font-mono text-[11px] font-bold uppercase tracking-widest text-teal-premium mb-3">Product Range</span>
+                    <h1 class="font-display font-extrabold text-white tracking-tight leading-tight" style="font-size:clamp(2.2rem,5vw,3.5rem);">Our Formulations</h1>
+                    <p class="text-base md:text-lg text-white/75 max-w-xl mt-4 leading-relaxed">Quality pharmaceutical formulations across multiple therapeutic areas, trusted by healthcare professionals.</p>
                 </div>
+            </div>
+            <section class="py-16 px-4 md:px-10 max-w-7xl mx-auto">
 
                 <!-- Product Filters & Search Panel -->
                 <div class="flex flex-col md:flex-row md:items-center justify-between gap-6 mb-12">
@@ -834,7 +843,7 @@
             <div class="space-y-6">
                 <h4 class="font-mono text-xs font-bold uppercase tracking-widest text-teal-premium">Headquarters</h4>
                 <p class="text-sm text-white/60 leading-relaxed">
-                    Flat No. 10801, A Tower, The Commune-1,<br/>
+                    # No. 10801, A Tower, The Commune-1,<br/>
                     Anekal Road, Mansur Panchayat,<br/>
                     Bengaluru Rural, Karnataka – 562129<br/>
                     India

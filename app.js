@@ -305,6 +305,13 @@ class PortalRouter {
         const container = document.getElementById("detail-section");
         if (!container) return;
 
+        // Use local product images — guaranteed to exist
+        const productImg = `images/${key}.png`;
+        const mechanismImg = `images/products-hero.png`;
+
+        // Icon map — no broken 'text_analysis' icon
+        const compositionIcons = ['science', 'shield_with_heart', 'bolt'];
+
         // Dynamic Product details generation
         container.innerHTML = `
             <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 items-center mb-16 md:mb-24 py-8">
@@ -329,39 +336,39 @@ class PortalRouter {
                         <div class="w-px h-10 bg-[#c4c6cf]/20 dark:bg-white/5 hidden sm:block"></div>
                         <div class="flex flex-col">
                             <span class="font-display text-2xl md:text-3xl font-extrabold text-navy-deep dark:text-white">${data.statStage}</span>
-                            <span class="font-mono text-[10px] text-navy-deep/40 dark:text-[#eff1f3]/40 font-bold uppercase tracking-wider mt-1">Clinical Phase</span>
+                            <span class="font-mono text-[10px] text-navy-deep/40 dark:text-[#eff1f3]/40 font-bold uppercase tracking-wider mt-1">Status</span>
                         </div>
                         <div class="w-px h-10 bg-[#c4c6cf]/20 dark:bg-white/5 hidden sm:block"></div>
                         <div class="flex flex-col">
                             <span class="font-display text-2xl md:text-3xl font-extrabold text-navy-deep dark:text-white">${data.statRegulatory}</span>
-                            <span class="font-mono text-[10px] text-navy-deep/40 dark:text-[#eff1f3]/40 font-bold uppercase tracking-wider mt-1">Regulatory</span>
+                            <span class="font-mono text-[10px] text-navy-deep/40 dark:text-[#eff1f3]/40 font-bold uppercase tracking-wider mt-1">Compliance</span>
                         </div>
                     </div>
 
                     <div class="flex flex-col sm:flex-row flex-wrap gap-4 pt-4">
-                        <button class="w-full sm:w-auto px-8 py-4 bg-navy-deep text-white rounded-xl font-bold font-display text-xs tracking-wider uppercase shadow-xl transition-all duration-300 hover:bg-[#1e3a5f] hover:translate-y-[-2px] hover:shadow-navy-deep/20 active:scale-95 flex items-center justify-center gap-2 dark:bg-teal-premium dark:hover:bg-teal-hover" id="request-clinical-data-btn">
-                            Request Clinical Data
-                            <span class="material-symbols-outlined text-sm">description</span>
-                        </button>
-                        <a href="https://wa.me/919515436426?text=Hello%20Zenesix,%20I%20am%20a%20healthcare%20professional%20interested%20in%20${data.title}." target="_blank" rel="noopener" class="w-full sm:w-auto px-8 py-4 border-2 border-teal-premium text-teal-premium rounded-xl font-bold font-display text-xs tracking-wider uppercase hover:bg-teal-premium/5 transition-all duration-300 flex items-center justify-center gap-2">
-                            WhatsApp Support
+                        <a href="https://wa.me/919515436426?text=Hello%20Zenesix,%20I%20am%20a%20healthcare%20professional%20interested%20in%20${data.title}." target="_blank" rel="noopener" class="w-full sm:w-auto px-8 py-4 bg-navy-deep text-white rounded-xl font-bold font-display text-xs tracking-wider uppercase shadow-xl transition-all duration-300 hover:bg-[#1e3a5f] hover:translate-y-[-2px] active:scale-95 flex items-center justify-center gap-2 dark:bg-teal-premium dark:hover:bg-teal-hover">
+                            Enquire on WhatsApp
                             <span class="material-symbols-outlined text-sm">chat</span>
+                        </a>
+                        <a href="#contact" class="w-full sm:w-auto px-8 py-4 border-2 border-teal-premium text-teal-premium rounded-xl font-bold font-display text-xs tracking-wider uppercase hover:bg-teal-premium/5 transition-all duration-300 flex items-center justify-center gap-2">
+                            Contact Us
+                            <span class="material-symbols-outlined text-sm">arrow_forward</span>
                         </a>
                     </div>
                 </div>
 
                 <div class="lg:col-span-6 relative">
                     <div class="glass-panel p-4 md:p-6 rounded-[32px] md:rounded-[40px] shadow-2xl relative border border-white/50 bg-white/60">
-                        <img src="${data.image}" alt="${data.title} Box Packaging" class="w-full h-auto rounded-[24px] md:rounded-[30px] shadow-lg transition-transform duration-700 hover:scale-[1.02]"/>
+                        <img src="${productImg}" alt="${data.title} Product" class="w-full h-auto rounded-[24px] md:rounded-[30px] shadow-lg transition-transform duration-700 hover:scale-[1.02]" onerror="this.style.minHeight='280px';this.style.background='#f0f4f8'"/>
                     </div>
                 </div>
             </div>
 
-            <!-- Core Molecular Composition -->
-            <div class="py-24 border-t border-[#c4c6cf]/20 dark:border-white/5">
-                <div class="text-center mb-16 space-y-4">
-                    <span class="font-mono text-xs font-bold uppercase tracking-wider text-teal-premium">Core Formulation Spec</span>
-                    <h2 class="font-display text-3xl md:text-4xl font-extrabold text-navy-deep dark:text-white">Molecular Composition</h2>
+            <!-- Product Composition -->
+            <div class="py-16 border-t border-[#c4c6cf]/20 dark:border-white/5">
+                <div class="text-center mb-12 space-y-4">
+                    <span class="font-mono text-xs font-bold uppercase tracking-wider text-teal-premium">Formulation Details</span>
+                    <h2 class="font-display text-3xl md:text-4xl font-extrabold text-navy-deep dark:text-white">Product Composition</h2>
                     <div class="w-16 h-1 bg-teal-premium mx-auto rounded-full"></div>
                 </div>
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -369,7 +376,7 @@ class PortalRouter {
                         <div class="glass-panel p-8 rounded-3xl flex flex-col justify-between gap-8 border-t-4 ${i === 1 ? 'border-t-navy-deep dark:border-t-teal-premium' : 'border-t-teal-premium'} glass-panel-hover shadow-sm">
                             <div class="space-y-6">
                                 <div class="w-12 h-12 rounded-2xl ${i === 1 ? 'bg-navy-deep/5 text-navy-deep dark:bg-teal-premium/10 dark:text-teal-premium' : 'bg-teal-premium/10 text-teal-premium'} flex items-center justify-center shadow-inner">
-                                    <span class="material-symbols-outlined text-2xl">${i === 1 ? 'shield_with_heart' : i === 0 ? 'text_analysis' : 'bolt'}</span>
+                                    <span class="material-symbols-outlined text-2xl">${compositionIcons[i] || 'medication'}</span>
                                 </div>
                                 <h3 class="font-display text-xl font-bold text-navy-deep dark:text-white">${c.name}</h3>
                                 <p class="text-sm text-navy-deep/70 dark:text-[#eff1f3]/70 leading-relaxed">${c.desc}</p>
@@ -380,22 +387,22 @@ class PortalRouter {
                 </div>
             </div>
 
-            <!-- Scientific Mechanism of Action -->
-            <div class="py-12 md:py-24 bg-navy-deep rounded-[32px] md:rounded-[40px] text-white p-6 md:p-16 grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center shadow-xl dark:bg-[#001d31]/80">
+            <!-- How It Works -->
+            <div class="py-12 md:py-20 bg-navy-deep rounded-[32px] md:rounded-[40px] text-white p-6 md:p-16 grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center shadow-xl dark:bg-[#001d31]/80">
                 <div class="relative rounded-2xl md:rounded-3xl overflow-hidden aspect-video shadow-2xl border border-white/10">
-                    <img src="${data.mechanismImage}" alt="Microscopic axonal pathway synthesis render" class="w-full h-full object-cover brightness-90"/>
-                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent flex items-end p-6 md:p-8">
+                    <img src="${mechanismImg}" alt="${data.title} pharmaceutical formulation" class="w-full h-full object-cover brightness-75"/>
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end p-6 md:p-8">
                         <div>
-                            <h4 class="font-display text-lg md:text-xl font-bold text-white mb-2">Cellular Action</h4>
-                            <p class="text-xs text-white/60 font-mono tracking-wider uppercase">High-precision diagnostic imaging</p>
+                            <h4 class="font-display text-lg md:text-xl font-bold text-white mb-1">Quality Assured</h4>
+                            <p class="text-xs text-white/60 font-mono tracking-wider uppercase">WHO GMP · ISO · GMP GLO Certified</p>
                         </div>
                     </div>
                 </div>
                 
                 <div class="space-y-8">
                     <div>
-                        <span class="font-mono text-xs font-semibold text-[#78f7e9] uppercase tracking-widest block mb-4">Scientific Pathway</span>
-                        <h2 class="font-display text-2xl md:text-3xl font-extrabold text-white leading-tight">Mechanism of Action</h2>
+                        <span class="font-mono text-xs font-semibold text-[#78f7e9] uppercase tracking-widest block mb-4">How It Works</span>
+                        <h2 class="font-display text-2xl md:text-3xl font-extrabold text-white leading-tight">Therapeutic Action</h2>
                         <p class="text-white/70 text-sm md:text-base leading-relaxed mt-4">${data.mechanismText}</p>
                     </div>
                     <div class="space-y-6">
@@ -412,71 +419,15 @@ class PortalRouter {
                 </div>
             </div>
 
-            <!-- Prescriber Verification Enquiry Form -->
-            <div class="py-12 md:py-24">
-                <div class="glass-panel rounded-[32px] md:rounded-[40px] p-6 md:p-16 border border-teal-premium/15 shadow-xl grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-center">
-                    <div class="lg:col-span-5 space-y-6">
-                        <span class="font-mono text-xs font-semibold text-teal-premium uppercase tracking-widest block">Medical Professionals Portal</span>
-                        <h2 class="font-display text-2xl md:text-3xl font-extrabold text-navy-deep dark:text-white leading-tight">Healthcare Professional Enquiry</h2>
-                        <p class="text-sm md:text-base text-navy-deep/70 dark:text-[#eff1f3]/70 leading-relaxed">
-                            Access peer-reviewed clinical studies, comparative trials, and standard dosage guidelines for <strong>${data.title}</strong>. Our product support desk is available to coordinate institutional requests.
-                        </p>
-                        <ul class="space-y-3.5 pt-2">
-                            <li class="flex items-center gap-3.5">
-                                <span class="material-symbols-outlined text-teal-premium text-[20px]" style="font-variation-settings: 'FILL' 1;">check_circle</span>
-                                <span class="text-sm font-semibold text-navy-deep/80 dark:text-[#eff1f3]/80">Request Sample Formulation Kits</span>
-                            </li>
-                            <li class="flex items-center gap-3.5">
-                                <span class="material-symbols-outlined text-teal-premium text-[20px]" style="font-variation-settings: 'FILL' 1;">check_circle</span>
-                                <span class="text-sm font-semibold text-navy-deep/80 dark:text-[#eff1f3]/80">Schedule Virtual Clinical Consultation</span>
-                            </li>
-                            <li class="flex items-center gap-3.5">
-                                <span class="material-symbols-outlined text-teal-premium text-[20px]" style="font-variation-settings: 'FILL' 1;">check_circle</span>
-                                <span class="text-sm font-semibold text-navy-deep/80 dark:text-[#eff1f3]/80">Register for Institutional Pricing Desk</span>
-                            </li>
-                        </ul>
-                    </div>
-
-                    <form class="lg:col-span-7 space-y-6" id="prescriber-enquiry-form">
-                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
-                            <div class="space-y-2">
-                                <label class="font-mono text-[10px] font-bold text-navy-deep/60 dark:text-[#eff1f3]/60 uppercase tracking-widest ml-1">Full Name</label>
-                                <input class="w-full h-12 px-4 rounded-xl glass-well focus:ring-0 outline-none transition-all placeholder:text-navy-deep/30 dark:placeholder:text-white/30 text-sm font-semibold" placeholder="Dr. Sarah Jenkins" type="text" required/>
-                            </div>
-                            <div class="space-y-2">
-                                <label class="font-mono text-[10px] font-bold text-navy-deep/60 dark:text-[#eff1f3]/60 uppercase tracking-widest ml-1">Medical License ID</label>
-                                <input class="w-full h-12 px-4 rounded-xl glass-well focus:ring-0 outline-none transition-all placeholder:text-navy-deep/30 dark:placeholder:text-white/30 text-sm font-semibold" placeholder="NPI-000000" type="text" required/>
-                            </div>
-                        </div>
-                        <div class="space-y-2">
-                            <label class="font-mono text-[10px] font-bold text-navy-deep/60 dark:text-[#eff1f3]/60 uppercase tracking-widest ml-1">Affiliated Institution</label>
-                            <input class="w-full h-12 px-4 rounded-xl glass-well focus:ring-0 outline-none transition-all placeholder:text-navy-deep/30 dark:placeholder:text-white/30 text-sm font-semibold" placeholder="General Medical Clinic" type="text" required/>
-                        </div>
-                        <div class="space-y-2">
-                            <label class="font-mono text-[10px] font-bold text-navy-deep/60 dark:text-[#eff1f3]/60 uppercase tracking-widest ml-1">Professional Email</label>
-                            <input class="w-full h-12 px-4 rounded-xl glass-well focus:ring-0 outline-none transition-all placeholder:text-navy-deep/30 dark:placeholder:text-white/30 text-sm font-semibold" placeholder="s.jenkins@medical-clinic.org" type="email" required/>
-                        </div>
-                        <button class="w-full py-4 bg-teal-premium text-white rounded-xl font-bold font-display text-xs tracking-wider uppercase hover:bg-teal-hover transition-colors shadow-lg active:scale-[0.98]" type="submit">Submit Verification Request</button>
-                        <p class="text-center text-navy-deep/45 dark:text-[#eff1f3]/45 font-mono text-[9px] uppercase tracking-widest mt-4">HIPAA compliant data processing secured by Zenesix Privacy Vault.</p>
-                    </form>
-                </div>
+            <!-- WhatsApp CTA Strip -->
+            <div class="py-12 md:py-16 text-center">
+                <p class="text-navy-deep/60 dark:text-[#eff1f3]/60 text-base mb-6">Interested in <strong class="text-navy-deep dark:text-white">${data.title}</strong>? Contact our team for product information and availability.</p>
+                <a href="https://wa.me/919515436426?text=Hello%20Zenesix,%20I%20would%20like%20to%20know%20more%20about%20${data.title}." target="_blank" rel="noopener" class="inline-flex items-center gap-3 bg-[#25D366] text-white px-10 py-4 rounded-2xl font-bold font-display text-sm tracking-wide shadow-lg hover:scale-105 active:scale-95 transition-all">
+                    <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.06 5.348 5.397.01 12.008.01c3.202.001 6.212 1.246 8.477 3.514 2.266 2.268 3.507 5.28 3.505 8.484-.004 6.657-5.34 11.997-11.953 11.997-2.005-.001-3.973-.502-5.724-1.455L0 24zm6.59-4.846c1.6.95 3.188 1.449 4.625 1.451 5.403.002 9.803-4.389 9.805-9.788.002-2.615-1.01-5.074-2.853-6.918C16.381 2.054 13.916.993 11.3.993c-5.404 0-9.807 4.394-9.809 9.793-.001 1.572.43 3.111 1.246 4.478L1.776 22l6.871-1.782z"/></svg>
+                    Chat on WhatsApp
+                </a>
             </div>
         `;
-
-        // Bind form submit event
-        const prescriberForm = document.getElementById("prescriber-enquiry-form");
-        if (prescriberForm) {
-            prescriberForm.addEventListener("submit", (e) => this.handlePrescriberSubmit(e));
-        }
-
-        // Bind request clinical data button event
-        const reqBtn = document.getElementById("request-clinical-data-btn");
-        if (reqBtn) {
-            reqBtn.addEventListener("click", () => {
-                alert(`Your verification parameters are required to download the peer-reviewed clinical dossiers for ${data.title}. Please fill out the Healthcare Professional Enquiry form below.`);
-                prescriberForm.scrollIntoView({ behavior: "smooth" });
-            });
-        }
     }
 
     handlePrescriberSubmit(e) {
