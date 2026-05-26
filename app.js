@@ -306,8 +306,8 @@ class PortalRouter {
         if (!container) return;
 
         // Use local product images — guaranteed to exist
-        const productImg = `images/${key}.png`;
-        const mechanismImg = `images/products-hero.png`;
+        const productImg = `/images/${key}.png`;
+        const mechanismImg = `/images/products-hero.png`;
 
         // Icon map — no broken 'text_analysis' icon
         const compositionIcons = ['science', 'shield_with_heart', 'bolt'];
