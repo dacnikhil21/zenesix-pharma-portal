@@ -12,7 +12,7 @@ function copyHeroImageDev() {
         name: 'copy-hero-image-dev',
         configureServer(server) {
             const src = path.resolve(
-                'C:/Users/ABHINAYA BEDGUM/.gemini/antigravity/brain/c94c13f6-63c3-485e-a337-7b1bb94a0643/media__1779539608525.png'
+                'C:/Users/ABHINAYA BEDGUM/.gemini/antigravity/brain/616f37b6-33e2-4ce5-a58b-c23accffe1fe/media__1779972475592.png'
             );
             const dest = path.resolve('./images/home-hero.png');
             try {

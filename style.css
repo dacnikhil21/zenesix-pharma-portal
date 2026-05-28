@@ -203,7 +203,9 @@ header.scrolled {
     height: 100%;
     object-fit: cover;
     object-position: center 30%;
-    transform: scale(1.04);
+    transform: scale(1.08);
+    filter: blur(28px) brightness(0.55);
+    opacity: 0.65;
     animation: hero-ken-burns 18s ease-in-out infinite alternate;
 }
 

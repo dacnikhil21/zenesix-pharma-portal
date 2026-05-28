@@ -161,64 +161,84 @@
 
                 <!-- Hero Content -->
                 <div class="relative z-20 max-w-7xl mx-auto px-6 md:px-10 w-full pt-40 pb-32">
-                    <div class="max-w-3xl flex flex-col gap-8">
+                    <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+                        
+                        <!-- Left Column: Premium healthcare details -->
+                        <div class="lg:col-span-7 flex flex-col gap-8">
 
-                        <!-- Trust badge -->
-                        <div class="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full border border-teal-premium/40 bg-teal-premium/10 backdrop-blur-sm w-fit animate-fade-in-up">
-                            <span class="material-symbols-outlined text-teal-premium text-[16px] align-middle" style="font-variation-settings:'FILL' 1">verified</span>
-                            <span class="font-mono text-[11px] font-bold uppercase tracking-widest text-teal-premium">WHO-GMP Approved Partner Companies &middot; Quality Assured</span>
-                        </div>
+                            <!-- Trust badge -->
+                            <div class="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full border border-teal-premium/40 bg-teal-premium/10 backdrop-blur-sm w-fit animate-fade-in-up">
+                                <span class="material-symbols-outlined text-teal-premium text-[16px] align-middle" style="font-variation-settings:'FILL' 1">verified</span>
+                                <span class="font-mono text-[11px] font-bold uppercase tracking-widest text-teal-premium">WHO-GMP Approved Partner Companies &middot; Quality Assured</span>
+                            </div>
 
-                        <!-- Main Heading -->
-                        <h1 class="font-display font-extrabold text-white leading-[1.10] animate-fade-in-up-2 tracking-tight" style="font-size:clamp(2.6rem,5vw,4.5rem);">
-                            Trusted Healthcare Solutions<br/>
-                            <span class="text-transparent bg-clip-text bg-gradient-to-r from-teal-premium to-[#a0fcf0]">for Better Patient</span> Outcomes
-                        </h1>
+                            <!-- Main Heading -->
+                            <h1 class="font-display font-extrabold text-white leading-[1.10] animate-fade-in-up-2 tracking-tight" style="font-size:clamp(2.6rem,5vw,4.5rem);">
+                                Trusted Healthcare Solutions<br/>
+                                <span class="text-transparent bg-clip-text bg-gradient-to-r from-teal-premium to-[#a0fcf0]">for Better Patient</span> Outcomes
+                            </h1>
 
-                        <!-- Subtext -->
-                        <p class="text-lg md:text-xl text-white/85 max-w-2xl leading-relaxed animate-fade-in-up-3 font-medium">
-                            Zenesix Pharmaceuticals provides trusted pharmaceutical and healthcare solutions dedicated to improving access to quality healthcare products across India.
-                        </p>
-
-                        <!-- Body paragraphs -->
-                        <div class="space-y-4 animate-fade-in-up-3">
-                            <p class="text-base md:text-[17px] text-white/75 leading-relaxed">
-                                Built on trust, quality, and accessibility, we specialize in the promotion and supply of pharmaceutical and nutraceutical formulations sourced from WHO GMP, ISO CERTIFIED, and GMP GLO CERTIFIED approved partner facilities.
+                            <!-- Subtext -->
+                            <p class="text-lg md:text-xl text-white/85 leading-relaxed animate-fade-in-up-3 font-medium">
+                                Zenesix Pharmaceuticals provides trusted pharmaceutical and healthcare solutions dedicated to improving access to quality healthcare products across India.
                             </p>
-                            <p class="text-base md:text-[17px] text-white/75 leading-relaxed">
-                                We are committed to supporting healthcare professionals with dependable healthcare solutions that contribute to better patient outcomes.
-                            </p>
+
+                            <!-- Body paragraphs -->
+                            <div class="space-y-4 animate-fade-in-up-3">
+                                <p class="text-base md:text-[17px] text-white/75 leading-relaxed">
+                                    Built on trust, quality, and accessibility, we specialize in the promotion and supply of pharmaceutical and nutraceutical formulations sourced from WHO GMP, ISO CERTIFIED, and GMP GLO CERTIFIED approved partner facilities.
+                                </p>
+                                <p class="text-base md:text-[17px] text-white/75 leading-relaxed">
+                                    We are committed to supporting healthcare professionals with dependable healthcare solutions that contribute to better patient outcomes.
+                                </p>
+                            </div>
+
+                            <!-- Highlights checklist -->
+                            <ul class="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-2 animate-fade-in-up-4">
+                                <li class="flex items-center gap-3">
+                                    <span class="material-symbols-outlined text-teal-premium text-[20px] shrink-0" style="font-variation-settings:'FILL' 1">check_circle</span>
+                                    <span class="text-white/85 text-sm font-semibold">Trusted Healthcare Partnerships</span>
+                                </li>
+                                <li class="flex items-center gap-3">
+                                    <span class="material-symbols-outlined text-teal-premium text-[20px] shrink-0" style="font-variation-settings:'FILL' 1">check_circle</span>
+                                    <span class="text-white/85 text-sm font-semibold">WHO-GMP Approved Partner Companies</span>
+                                </li>
+                                <li class="flex items-center gap-3">
+                                    <span class="material-symbols-outlined text-teal-premium text-[20px] shrink-0" style="font-variation-settings:'FILL' 1">check_circle</span>
+                                    <span class="text-white/85 text-sm font-semibold">Quality-Assured Healthcare Products</span>
+                                </li>
+                                <li class="flex items-center gap-3">
+                                    <span class="material-symbols-outlined text-teal-premium text-[20px] shrink-0" style="font-variation-settings:'FILL' 1">check_circle</span>
+                                    <span class="text-white/85 text-sm font-semibold">Supplier of Quality Pharmaceutical Products</span>
+                                </li>
+                                <li class="flex items-center gap-3">
+                                    <span class="material-symbols-outlined text-teal-premium text-[20px] shrink-0" style="font-variation-settings:'FILL' 1">check_circle</span>
+                                    <span class="text-white/85 text-sm font-semibold">Patient-Centered Healthcare Solutions</span>
+                                </li>
+                            </ul>
+
+                            <!-- Scroll hint -->
+                            <div class="flex items-center gap-3 pt-2 opacity-50 animate-fade-in-up-4">
+                                <span class="w-6 h-[1px] bg-white inline-block"></span>
+                                <span class="font-mono text-[10px] tracking-widest uppercase text-white">QUALITY &middot; TRUST &middot; HEALTHCARE</span>
+                            </div>
                         </div>
 
-                        <!-- Highlights checklist -->
-                        <ul class="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-2 animate-fade-in-up-4">
-                            <li class="flex items-center gap-3">
-                                <span class="material-symbols-outlined text-teal-premium text-[20px] shrink-0" style="font-variation-settings:'FILL' 1">check_circle</span>
-                                <span class="text-white/85 text-sm font-semibold">Trusted Healthcare Partnerships</span>
-                            </li>
-                            <li class="flex items-center gap-3">
-                                <span class="material-symbols-outlined text-teal-premium text-[20px] shrink-0" style="font-variation-settings:'FILL' 1">check_circle</span>
-                                <span class="text-white/85 text-sm font-semibold">WHO-GMP Approved Partner Companies</span>
-                            </li>
-                            <li class="flex items-center gap-3">
-                                <span class="material-symbols-outlined text-teal-premium text-[20px] shrink-0" style="font-variation-settings:'FILL' 1">check_circle</span>
-                                <span class="text-white/85 text-sm font-semibold">Quality-Assured Healthcare Products</span>
-                            </li>
-                            <li class="flex items-center gap-3">
-                                <span class="material-symbols-outlined text-teal-premium text-[20px] shrink-0" style="font-variation-settings:'FILL' 1">check_circle</span>
-                                <span class="text-white/85 text-sm font-semibold">Supplier of Quality Pharmaceutical Products</span>
-                            </li>
-                            <li class="flex items-center gap-3">
-                                <span class="material-symbols-outlined text-teal-premium text-[20px] shrink-0" style="font-variation-settings:'FILL' 1">check_circle</span>
-                                <span class="text-white/85 text-sm font-semibold">Patient-Centered Healthcare Solutions</span>
-                            </li>
-                        </ul>
-
-                        <!-- Scroll hint -->
-                        <div class="flex items-center gap-3 pt-2 opacity-50 animate-fade-in-up-4">
-                            <span class="w-6 h-[1px] bg-white inline-block"></span>
-                            <span class="font-mono text-[10px] tracking-widest uppercase text-white">QUALITY &middot; TRUST &middot; HEALTHCARE</span>
+                        <!-- Right Column: Premium vertical lobby mockup -->
+                        <div class="lg:col-span-5 w-full flex justify-center items-center animate-fade-in-up-3">
+                            <div class="relative w-full max-w-[400px] aspect-[9/16] rounded-[36px] p-2 bg-gradient-to-tr from-white/20 to-white/5 backdrop-blur-md border border-white/20 shadow-[0_24px_50px_rgba(0,0,0,0.4)] overflow-hidden group/hero-img">
+                                <!-- Ambient Glow Behind Frame -->
+                                <div class="absolute -inset-4 bg-teal-premium/10 blur-2xl opacity-50 group-hover/hero-img:opacity-85 transition-opacity duration-700 pointer-events-none"></div>
+                                
+                                <!-- Main Image Container -->
+                                <div class="w-full h-full rounded-[28px] overflow-hidden relative border border-white/10">
+                                    <img src="images/home-hero.png" alt="Zenesix Pharmaceuticals Headquarters Reception" class="w-full h-full object-cover transition-transform duration-700 group-hover/hero-img:scale-105" style="image-rendering: auto;"/>
+                                    <!-- Premium reflection overlay -->
+                                    <div class="absolute inset-0 bg-gradient-to-tr from-transparent via-white/5 to-white/15 pointer-events-none"></div>
+                                </div>
+                            </div>
                         </div>
+
                     </div>
                 </div>
 
