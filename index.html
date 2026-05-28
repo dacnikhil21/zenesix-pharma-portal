@@ -153,7 +153,7 @@
             <section class="hero-section" id="home">
                 <!-- Cinematic Background Image -->
                 <div class="hero-bg">
-                    <img src="images/home-hero.png" onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1581093458791-9f3c3900df4b?auto=format&fit=crop&w=1920&q=90'" alt="Zenesix Pharmaceuticals premium healthcare solutions" id="hero-bg-img"/>
+                    <img src="images/laboratory-hero.png" onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1581093458791-9f3c3900df4b?auto=format&fit=crop&w=1920&q=90'" alt="Zenesix Pharmaceuticals premium healthcare solutions" id="hero-bg-img"/>
                     <!-- Dark cinematic overlays — always applied -->
                     <div class="hero-overlay"></div>
                     <div class="hero-overlay-bottom"></div>
@@ -301,10 +301,18 @@
             <!-- ═══════════════════════════════════════════════ -->
             <!-- ABOUT US — Inline Homepage Section             -->
             <!-- ═══════════════════════════════════════════════ -->
-            <section class="py-24 px-4 md:px-8 bg-navy-deep dark:bg-[#001d31] relative overflow-hidden">
+            <section class="py-24 px-4 md:px-8 relative overflow-hidden bg-navy-deep dark:bg-[#001424]">
+                <!-- Lobby Mockup Background Image with Dark Premium Overlay -->
+                <div class="absolute inset-0 z-0">
+                    <img src="images/home-hero.png" alt="Zenesix Headquarters Reception Lobby" class="w-full h-full object-cover object-[center_15%] opacity-35 scale-[1.02] filter brightness-[0.55]" />
+                    <!-- Premium dark navy radial and linear gradient overlay for maximum readability while letting the branding show through -->
+                    <div class="absolute inset-0 bg-gradient-to-r from-navy-deep via-navy-deep/90 to-navy-deep/45 dark:from-[#001424] dark:via-[#001424]/90 dark:to-[#001424]/45"></div>
+                    <div class="absolute inset-0 bg-gradient-to-t from-navy-deep/80 via-transparent to-navy-deep/20 dark:from-[#001424]/80 dark:to-[#001424]/20"></div>
+                </div>
+
                 <!-- Background decorative pattern -->
-                <div class="absolute inset-0 pointer-events-none opacity-[0.035]" style="background-image: radial-gradient(circle at 2px 2px, #fff 1.2px, transparent 0); background-size: 48px 48px;"></div>
-                <div class="absolute top-0 right-0 w-80 h-80 opacity-10 pointer-events-none" style="background: radial-gradient(circle, #0CC5B7 0%, transparent 70%);"></div>
+                <div class="absolute inset-0 pointer-events-none opacity-[0.02]" style="background-image: radial-gradient(circle at 2px 2px, #fff 1.2px, transparent 0); background-size: 48px 48px;"></div>
+                <div class="absolute top-0 right-0 w-96 h-96 opacity-10 pointer-events-none" style="background: radial-gradient(circle, #0CC5B7 0%, transparent 70%);"></div>
 
                 <div class="max-w-7xl mx-auto relative z-10">
                     <!-- Section Header -->
