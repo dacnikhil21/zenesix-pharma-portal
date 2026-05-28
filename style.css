@@ -202,28 +202,27 @@ header.scrolled {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    object-position: center 30%;
-    transform: scale(1.08);
-    filter: blur(28px) brightness(0.55);
-    opacity: 0.65;
+    object-position: center 15%;
+    transform: scale(1.04);
     animation: hero-ken-burns 18s ease-in-out infinite alternate;
 }
 
 @keyframes hero-ken-burns {
     0%   { transform: scale(1.04) translateX(0); }
-    100% { transform: scale(1.10) translateX(-1%); }
+    100% { transform: scale(1.08) translateX(-0.5%); }
 }
 
 .hero-overlay {
     position: absolute;
     inset: 0;
     z-index: 1;
-    /* Softened the overlay to make the image visible while keeping text readable */
+    /* Strong left-side overlay for text readability, subtle on right to show branding */
     background: linear-gradient(
         105deg,
-        rgba(7,43,97,0.85) 0%,
-        rgba(7,43,97,0.65) 40%,
-        rgba(7,43,97,0.30) 100%
+        rgba(7,43,97,0.88) 0%,
+        rgba(7,43,97,0.72) 45%,
+        rgba(7,43,97,0.45) 75%,
+        rgba(7,43,97,0.25) 100%
     );
 }
 
