@@ -358,8 +358,8 @@ class PortalRouter {
                 </div>
 
                 <div class="lg:col-span-6 relative">
-                    <div class="glass-panel p-4 md:p-6 rounded-[32px] md:rounded-[40px] shadow-2xl relative border border-white/50 bg-white/60">
-                        <img src="${productImg}" alt="${data.title} Product" class="w-full h-auto rounded-[24px] md:rounded-[30px] shadow-lg transition-transform duration-700 hover:scale-[1.02]" onerror="this.style.minHeight='280px';this.style.background='#f0f4f8'"/>
+                    <div class="glass-panel p-4 md:p-6 rounded-[32px] md:rounded-[40px] shadow-2xl relative border border-white/50 bg-white">
+                        <img src="${productImg}" alt="${data.title} Product" class="w-full h-auto rounded-[24px] md:rounded-[30px] shadow-lg transition-transform duration-700 hover:scale-[1.02] object-contain" onerror="this.style.minHeight='280px';this.style.background='#f0f4f8'"/>
                     </div>
                 </div>
             </div>
