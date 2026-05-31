@@ -27,8 +27,30 @@ function copyHeroImageDev() {
     };
 }
 
+function copyCrandropImageDev() {
+    return {
+        name: 'copy-crandrop-image-dev',
+        configureServer(server) {
+            const src = path.resolve(
+                'C:/Users/ABHINAYA BEDGUM/.gemini/antigravity/brain/dd930479-3e06-4609-91dc-b5498714f159/crandrop_cropped_1780236526734.png'
+            );
+            const destPng = path.resolve('./images/crandrop.png');
+            const destJpg = path.resolve('./images/crandrop.jpg');
+            try {
+                if (fs.existsSync(src)) {
+                    fs.copyFileSync(src, destPng);
+                    fs.copyFileSync(src, destJpg);
+                    console.log('\x1b[32m%s\x1b[0m', '[zenesix] ✓ Crandrop cropped image synced to images/');
+                }
+            } catch (e) {
+                // Silently skip
+            }
+        }
+    };
+}
+
 export default defineConfig({
-    plugins: [copyHeroImageDev()],
+    plugins: [copyHeroImageDev(), copyCrandropImageDev()],
     build: {
         outDir: 'dist',
         assetsDir: 'assets',
