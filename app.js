@@ -8,37 +8,38 @@ const FormulationRepository = {
         id: "axogain",
         title: "Axogain",
         category: "Neurology",
-        slogan: "Restoring the Pathways of Thought",
-        badge: "Neuro-Regenerative Science",
-        description: "A breakthrough in clinical neurobiology. Axogain facilitates targeted myelin sheath restoration and nerve health through a high-bioavailability formulation of Methylcobalamin and Alpha-Lipoic Acid.",
-        image: "https://lh3.googleusercontent.com/aida/ADBb0ugC1pchncINZIXUvp5Ibi4OSbH6OH2ja9gXlo019qKAjMCQR5zrEc4QO647WkTjPsQca6Ys0TF3W6pbijXUjoW-0ctaNIs4_bIW55Gwn3KBTnWCdsqBrriaw7T9-ZNBLOoA4VoLWoyzlcMbWK5vOm6FTqVCvRQLS6C3fj06hA7nj4tyzwVdB7H4JhwYO8NffBSmj03cau2gBponv1emnvOMwzDwUMrheZs-2G2e-rHKSd7wrHX1Z8Zq9t8",
+        slogan: "Neurocare Support Formula",
+        badge: "Neurocare Solutions",
+        description: "Axogain is a balanced neurocare formulation designed to support nerve health. It combines Methylcobalamin, Alpha Lipoic Acid, Pyridoxine Hydrochloride, and Folic Acid to promote healthy peripheral nerve function and cellular metabolism.",
+        image: "images/axogain.png",
         statBio: "98%",
-        statStage: "Phase III",
-        statRegulatory: "FDA Track 1",
+        statStage: "Established",
+        statRegulatory: "Quality Sourced",
         composition: [
-            { name: "Methylcobalamin (B12)", desc: "A neurologically active form of Vitamin B12 that crosses the blood-brain barrier effectively, essential for myelin maintenance.", role: "Neural Sheath Repair" },
-            { name: "Alpha-Lipoic Acid (ALA)", desc: "Universal antioxidant that neutralizes oxidative stress in both water and fat-soluble neural environments.", role: "Neuroprotection" },
-            { name: "Bio-Availability Complex", desc: "Proprietary transport matrix that optimizes absorption rates within the gastric environment for maximum neural delivery.", role: "Optimized Delivery" }
+            { name: "Methylcobalamin", desc: "The active form of Vitamin B12, crucial for peripheral nerve health, myelin sheath synthesis, and axonal integrity.", role: "Myelin Support" },
+            { name: "Alpha Lipoic Acid", desc: "A powerful universal antioxidant that protects nerve tissues from oxidative stress and supports cellular energy production.", role: "Antioxidant Protection" },
+            { name: "Pyridoxine Hydrochloride", desc: "Vitamin B6, essential for amino acid metabolism, nervous system health, and neurotransmitter synthesis.", role: "Nerve Function" },
+            { name: "Folic Acid", desc: "Supports DNA synthesis, red blood cell formation, and works in tandem with B12 to promote healthy cellular growth.", role: "Cellular Health" }
         ],
-        mechanismText: "Precision-engineered molecular components work in synergy to protect and repair neural pathways at a cellular level.",
+        mechanismText: "Clinically balanced vitamins and antioxidants work in synergy to protect and maintain healthy nerve function.",
         mechanismSteps: [
-            { num: 1, title: "Myelin Sheath Repair", desc: "Active methylcobalamin molecules initiate the synthesis of lecithin and sphingomyelin, patching damaged neural insulation." },
-            { num: 2, title: "Oxidative Stress Abatement", desc: "ALA scavenges free radicals that cause neuropathic and age-related neural degradation, preserving synaptic integrity." },
-            { num: 3, title: "Glutathione Restoration", desc: "Supports the body's natural defense by recycling Vitamin C and E, fostering a sustainable healing environment." }
+            { num: 1, title: "Myelin Protection", desc: "Methylcobalamin supports the synthesis of key lipids that constitute the myelin sheath, protecting nerve fibers." },
+            { num: 2, title: "Oxidative Stress Reduction", desc: "Alpha Lipoic Acid scavenges free radicals, reducing oxidative stress and protecting sensitive nerve cells." },
+            { num: 3, title: "Co-Enzyme Synergy", desc: "Pyridoxine and Folic Acid act as co-enzymes in vital metabolic pathways, supporting overall nervous system vitality." }
         ],
-        mechanismImage: "https://lh3.googleusercontent.com/aida/ADBb0uiC1YhZCkkZC1tVQowYU99m7b4veg3PmTCvXk_3Xj5Q-9CaCokdq9t7u5sVwbqTm9zFUgu3mCYWuIOIbWtXfRtdddyAOEAQpV8Owsuayw0vuWA5LV2zjmz97nLFOC9On9qppd3hm0L1JBUyutH65NtV6xtf68pGWcONIyyI2piwdTo2tx12Z0MvDcv2PgcuQzNP9XF6N9_ib2Rc8FKV5uLy39i8zajm7v1iZ3AQB-Vp0GzVaK3l4ONk-yY"
+        mechanismImage: "images/products-hero.png"
     },
     crandrop: {
         id: "crandrop",
         title: "Crandrop",
         category: "Urology",
-        slogan: "Advanced Cellular Protection System",
+        slogan: "Urinary Tract Care Formula",
         badge: "Urinary Tract Health",
         description: "A clinical formulation designed to deliver high-potency botanical defense. Crandrop promotes comprehensive urinary tract protection and metabolic equilibrium using glycemic-neutral premium elements.",
-        image: "https://lh3.googleusercontent.com/aida/ADBb0uigmwFuKA3WXnNDztRx6D1XsBsQ0gg1gsVLU4LFzctYj2aGM9r82IIe2qAvqDzq5dlQBvtCOX4g8rLibtfDPEl2bv0UNlayrHdNpqBZutN-8Dp7aoqzn45wNZ_sAdII9oCsuYz5CUscoP_oXarz7ANFZ4eX-U-8b7XjHlHr3U8I6FCxBG9D2x3MGCOSC8TgpTEjX-QwvmWQys1s-IiQAjyWLZrUTtJQyWAQgPGSRLd4swyTChhibcev_fU",
+        image: "images/crandrop.png",
         statBio: "95%",
         statStage: "Established",
-        statRegulatory: "WHO Compliant",
+        statRegulatory: "Quality Sourced",
         composition: [
             { name: "Standardized Cranberry Extract", desc: "Highly concentrated PACs that prevent bacterial adhesion on mucosal surfaces.", role: "Bacterial Inhibition" },
             { name: "D-Mannose Complex", desc: "A naturally occurring monosaccharide that binds to impurities for smooth, natural clearance.", role: "Impurities Clearance" },
@@ -50,79 +51,83 @@ const FormulationRepository = {
             { num: 2, title: "Impurity Filtration", desc: "D-Mannose binds directly to existing foreign organisms, allowing fast, non-irritant clearance." },
             { num: 3, title: "Gastric Preservation", desc: "The sugar-free molecular structure bypasses gastric breakdown, arriving fully active at the urinary tract." }
         ],
-        mechanismImage: "https://lh3.googleusercontent.com/aida/ADBb0uiC1YhZCkkZC1tVQowYU99m7b4veg3PmTCvXk_3Xj5Q-9CaCokdq9t7u5sVwbqTm9zFUgu3mCYWuIOIbWtXfRtdddyAOEAQpV8Owsuayw0vuWA5LV2zjmz97nLFOC9On9qppd3hm0L1JBUyutH65NtV6xtf68pGWcONIyyI2piwdTo2tx12Z0MvDcv2PgcuQzNP9XF6N9_ib2Rc8FKV5uLy39i8zajm7v1iZ3AQB-Vp0GzVaK3l4ONk-yY"
+        mechanismImage: "images/products-hero.png"
     },
     flexivora: {
         id: "flexivora",
         title: "Flexivora",
         category: "Orthopedic",
-        slogan: "Next-Gen Joint Restoration Matrix",
+        slogan: "Clinical Strength Joint Support Formula",
         badge: "Orthopedic Solutions",
-        description: "Clinical strength joint support capsules utilizing advanced bio-available collagen and micro-mineral complexes to accelerate mobility recovery and cartilage tissue health.",
-        image: "https://lh3.googleusercontent.com/aida/ADBb0uhvFCTp-FkRZtDzEBusBvYNtxd0FRFZA8aRgwsCbzQf7qSPMCXMpptbngVuCCePld6NjUFYVV0fI3gOosthclt56CezHQAyYr8N5epgB3O5EnY3Y4lPvf-0mHH6ElSZhSCrlccJKdUM_hpEohRj4vTzOt-Ig_AGYg68HLCUE-1lM2MEs90cU2LC9RnMGiawK-sSpjES0Lsys4m0MS2yBcRqOCiS8U30t_MTcDzVqltkcfKsjwS9Pj2DMw",
+        description: "Clinical strength joint support tablets formulated with premium Sodium Hyaluronate, Boswellia Serrata Extract, Nano Curcumin, Undenatured Collagen Type II, and Astaxanthin to support joint mobility, cartilage health, and physical comfort.",
+        image: "images/flexivora.png",
         statBio: "92%",
-        statStage: "Phase II",
-        statRegulatory: "EMA Listed",
+        statStage: "Established",
+        statRegulatory: "Quality Sourced",
         composition: [
-            { name: "Bio-Available Type II Collagen", desc: "Provides structural building blocks required to replenish worn joint cushions naturally.", role: "Cartilage Synthesis" },
-            { name: "Micro-Mineral Complex", desc: "High-grade synergy of Manganese and Boron essential for bone matrix density.", role: "Density Enrichment" },
-            { name: "Hyaluronic Acid Booster", desc: "Restores joint fluid viscosity, reducing friction and localized mechanical wear.", role: "Synovial Lubrication" }
+            { name: "Sodium Hyaluronate", desc: "A key component of synovial fluid that helps maintain joint lubrication and shock absorption.", role: "Joint Lubrication" },
+            { name: "Boswellia Serrata Extract", desc: "Standardized herbal extract known for its natural support in easing joint discomfort and inflammation.", role: "Inflammatory Support" },
+            { name: "Nano Curcumin", desc: "Highly bioavailable form of curcumin that supports cellular health and antioxidant defense in joints.", role: "Antioxidant Support" },
+            { name: "Undenatured Collagen Type II", desc: "Supports healthy joint cartilage structure and physical mobility.", role: "Cartilage Support" },
+            { name: "Astaxanthin", desc: "A potent carotenoid antioxidant that neutralizes free radicals in joint tissues.", role: "Oxidative Defense" }
         ],
-        mechanismText: "Rebuilding mechanical integrity through enzymatic triggers and deep structural supplementation.",
+        mechanismText: "Combining clinically studied natural extracts and key joint structural components to support mobility and joint comfort.",
         mechanismSteps: [
-            { num: 1, title: "Synovial Hydration", desc: "Active agents stimulate fluid synthesis within the joint pocket, easing friction instantly." },
-            { num: 2, title: "Chondrocyte Activation", desc: "Peptides act as messenger molecules, signaling specialized cells to produce new cartilage matrix." },
-            { num: 3, title: "Matrix Stabilization", desc: "Trace micro-minerals cross-link collagen strands, solidifying structural stability." }
+            { num: 1, title: "Joint Lubrication", desc: "Sodium Hyaluronate helps maintain the fluid density within joints, promoting smooth mechanical movement." },
+            { num: 2, title: "Cartilage Structural Support", desc: "Undenatured Collagen Type II provides essential structural proteins to support natural cartilage health." },
+            { num: 3, title: "Antioxidant Protection", desc: "Nano Curcumin and Astaxanthin work in synergy to defend joint cells against oxidative stressors." }
         ],
-        mechanismImage: "https://lh3.googleusercontent.com/aida/ADBb0uiC1YhZCkkZC1tVQowYU99m7b4veg3PmTCvXk_3Xj5Q-9CaCokdq9t7u5sVwbqTm9zFUgu3mCYWuIOIbWtXfRtdddyAOEAQpV8Owsuayw0vuWA5LV2zjmz97nLFOC9On9qppd3hm0L1JBUyutH65NtV6xtf68pGWcONIyyI2piwdTo2tx12Z0MvDcv2PgcuQzNP9XF6N9_ib2Rc8FKV5uLy39i8zajm7v1iZ3AQB-Vp0GzVaK3l4ONk-yY"
+        mechanismImage: "images/products-hero.png"
     },
     histoheal: {
         id: "histoheal",
         title: "Histoheal",
         category: "Surgeons",
-        slogan: "Advanced Tissue Regeneration Matrix",
+        slogan: "Systemic Enzyme Therapy Tablets",
         badge: "Surgical Recovery Solutions",
-        description: "State-of-the-art topical regenerative cream designed to soothe inflammation, accelerate post-operative skin barrier recovery, and repair complex epidermal tissue damage.",
-        image: "https://lh3.googleusercontent.com/aida/ADBb0uigGB5WW0LIbX0xq14r4l-2FZ6ElkuJPiZMY2MwPD4ZVEhJDxbgJK0oASvJBdAfZJnK3m0DQ0mR_aQhAVbgp9XsObdxDcGTZUOBO9kzIa8e7NaZIsqWP4Bh6dKb5svlFrA9_EvIxTfU0O-qkUC0F42_ihbSM3eUdy_YQP5EUaypkGJjdbkrv_zU6I6Rac8-1bnJAERCpj44oBS0mIF725QXxxCrGcNJlmBU1vNWzYVjjA9fwsSN1_mUNg",
+        description: "A professional systemic enzyme formulation. Histoheal features a high-activity blend of Trypsin and Chymotrypsin in a 6:1 ratio, providing 100,000 AU of proteolytic enzyme activity to support tissue recovery and natural resolution of swelling.",
+        image: "images/histoheal.png",
         statBio: "94%",
-        statStage: "Approved",
-        statRegulatory: "WHO-GMP Sourced",
+        statStage: "Established",
+        statRegulatory: "Quality Sourced",
         composition: [
-            { name: "Proteolytic Enzyme Matrix", desc: "Gently digests damaged proteins on epidermal surfaces, preparing the field for repair.", role: "Epidermal Debridement" },
-            { name: "Centella Asiatica Peptide", desc: "A powerful botanical signaling compound that speeds up fibroblast synthesis significantly.", role: "Fibroblast Triggers" },
-            { name: "Ceramide NP Lipid base", desc: "Mimics natural skin lipids to lock in moisture and establish a protective sterile barrier.", role: "Barrier Fortification" }
+            { name: "Trypsin", desc: "A crucial proteolytic enzyme that breaks down cellular debris at the recovery site, supporting healthy healing processes.", role: "Systemic Debridement" },
+            { name: "Chymotrypsin", desc: "Proteolytic enzyme that works synergistically with Trypsin to help resolve local swelling and vascular congestion.", role: "Resolution of Edema" },
+            { name: "6:1 Optimized Ratio", desc: "Strictly balanced ratio of Trypsin and Chymotrypsin for clinical efficacy and therapeutic outcome.", role: "Therapeutic Synergy" },
+            { name: "100,000 AU Activity", desc: "Ensures standardized high potency and consistent systemic enzymatic action with every tablet.", role: "High Potency Standard" }
         ],
-        mechanismText: "Accelerated tissue recovery through cellular signaling and lipid barrier restoration.",
+        mechanismText: "Standardized proteolytic enzymes promote systemic support for natural recovery, vascular flow, and resolution of edema.",
         mechanismSteps: [
-            { num: 1, title: "Debris Clearance", desc: "Proteolytic enzymes sweep micro-wastes, clearing space for fresh epidermal development." },
-            { num: 2, title: "Collagen Proliferation", desc: "Phyto-peptides trigger rapid cellular division, forming a new tissue web quickly." },
-            { num: 3, title: "Lipid Matrix Lock", desc: "High-density ceramides seal the barrier, blocking atmospheric impurities and maintaining hydration." }
+            { num: 1, title: "Debris Resolution", desc: "Trypsin clears macro-proteins at the site of swelling, fostering a clean recovery environment." },
+            { num: 2, title: "Edema Abatement", desc: "Chymotrypsin helps restore normal capillary permeability and fluid drainage, reducing localized congestion." },
+            { num: 3, title: "Micro-Circulatory Support", desc: "Enzymatic action supports optimal blood flow and nutrient delivery to recovering tissues." }
         ],
-        mechanismImage: "https://lh3.googleusercontent.com/aida/ADBb0uiC1YhZCkkZC1tVQowYU99m7b4veg3PmTCvXk_3Xj5Q-9CaCokdq9t7u5sVwbqTm9zFUgu3mCYWuIOIbWtXfRtdddyAOEAQpV8Owsuayw0vuWA5LV2zjmz97nLFOC9On9qppd3hm0L1JBUyutH65NtV6xtf68pGWcONIyyI2piwdTo2tx12Z0MvDcv2PgcuQzNP9XF6N9_ib2Rc8FKV5uLy39i8zajm7v1iZ3AQB-Vp0GzVaK3l4ONk-yY"
+        mechanismImage: "images/products-hero.png"
     },
     "velytra-gel": {
         id: "velytra-gel",
         title: "Velytra-Gel",
         category: "Orthopedic",
-        slogan: "Bio-Adaptive Pain Relief Matrix",
+        slogan: "Topical Pain Relief Gel",
         badge: "Orthopedic Solutions",
-        description: "Transdermal analgesic gel featuring a non-greasy rapid absorption matrix to eliminate localized inflammation, muscle soreness, and joint stiffness.",
-        image: "https://lh3.googleusercontent.com/aida/ADBb0ugrLwCZOjykuanhsrDwlEX4ND2XGHPWOU1JHeidbEhaQSa_g9JBHViYXiwmrHCp4DeNF6Zk2TLGf9IXkMF0Cqis6_hcJpV5gg316dM96_QxpQpRM76pYXCeFrAeqx572DtZ2nJCRn-zb1-q7vu30Jng8_o-2X6JxwINNOyw4Q3pkB64hNXW0ZREkRJRTfu7Ize-Y2d6FqrpZhYW6yUgxTW-2r3AmeQB_7_oR9mWyW70DOqSilJurj5ATEM",
+        description: "Velytra-Gel is a highly effective, fast-acting topical pain relief gel. It combines the anti-inflammatory action of Diclofenac Diethylamine with Virgin Linseed Oil, Methyl Salicylate, Menthol, and Capsaicin Gel to target localized joint and muscle discomfort.",
+        image: "images/velytra-gel.png",
         statBio: "96%",
-        statStage: "Phase III",
-        statRegulatory: "FDA Track 2",
+        statStage: "Established",
+        statRegulatory: "Quality Sourced",
         composition: [
-            { name: "Non-Steroidal Active Analgesic", desc: "Targets pain pathways directly, blocking inflammatory enzymes fast.", role: "Analgesic Action" },
-            { name: "Transdermal Hydrogel Matrix", desc: "A cooling, non-greasy carrier that enhances tissue penetration depth.", role: "Deep Penetration" },
-            { name: "Mentha Piperita coolant", desc: "Induces an immediate thermal reaction that desensitizes localized pain fibers.", role: "Thermal Comfort" }
+            { name: "Diclofenac Diethylamine", desc: "A potent non-steroidal anti-inflammatory drug (NSAID) that targets localized pain and swelling at the source.", role: "Anti-Inflammatory" },
+            { name: "Virgin Linseed Oil", desc: "Contains essential fatty acids that support tissue health and assist in the smooth absorption of active ingredients.", role: "Absorption & Tissue Support" },
+            { name: "Methyl Salicylate", desc: "Acts as a counter-irritant, inducing mild local warmth to ease deep muscle and joint stiffness.", role: "Pain Relief" },
+            { name: "Menthol & Capsaicin Gel", desc: "Provide a synergistic heating-cooling sensation to rapidly soothe pain receptors and stimulate local blood flow.", role: "Sensory Comfort & Relief" }
         ],
-        mechanismText: "Immediate localized comfort achieved through cooling thermal triggers and deep penetrative NSAID absorption.",
+        mechanismText: "Synergistic formulation provides rapid localized relief by targeting inflammatory pathways and soothing painful tissues.",
         mechanismSteps: [
-            { num: 1, title: "Cooling Desensitization", desc: "Active cooling agents stimulate sensory nerve terminals, reducing immediate pain awareness." },
-            { num: 2, title: "Deep Derm-Penetration", desc: "The aqueous hydrogel pushes primary analgesics through skin layers directly to muscle tissues." },
-            { num: 3, title: "COX-Enzyme Blockage", desc: "NSAIDs shut down inflammatory pathways, alleviating local swelling and muscle tension." }
+            { num: 1, title: "NSAID Action", desc: "Diclofenac Diethylamine penetrates deep to inhibit cyclooxygenase (COX) enzymes, reducing localized swelling." },
+            { num: 2, title: "Counter-Irritant Warmth", desc: "Methyl Salicylate and Capsaicin stimulate local circulation, creating a warming sensation that relieves muscle tension." },
+            { num: 3, title: "Sensation Cooling", desc: "Menthol provides a cooling sensation that works in tandem with the warmth to soothe local nerve endings." }
         ],
-        mechanismImage: "https://lh3.googleusercontent.com/aida/ADBb0uiC1YhZCkkZC1tVQowYU99m7b4veg3PmTCvXk_3Xj5Q-9CaCokdq9t7u5sVwbqTm9zFUgu3mCYWuIOIbWtXfRtdddyAOEAQpV8Owsuayw0vuWA5LV2zjmz97nLFOC9On9qppd3hm0L1JBUyutH65NtV6xtf68pGWcONIyyI2piwdTo2tx12Z0MvDcv2PgcuQzNP9XF6N9_ib2Rc8FKV5uLy39i8zajm7v1iZ3AQB-Vp0GzVaK3l4ONk-yY"
+        mechanismImage: "images/products-hero.png"
     }
 };
 
@@ -306,8 +311,8 @@ class PortalRouter {
         if (!container) return;
 
         // Use local product images — guaranteed to exist
-        const productImg = `/images/${key}.png`;
-        const mechanismImg = `/images/products-hero.png`;
+        const productImg = `images/${key}.png`;
+        const mechanismImg = `images/products-hero.png`;
 
         // Icon map — no broken 'text_analysis' icon
         const compositionIcons = ['science', 'shield_with_heart', 'bolt'];
@@ -393,8 +398,8 @@ class PortalRouter {
                     <img src="${mechanismImg}" alt="${data.title} pharmaceutical formulation" class="w-full h-full object-cover brightness-75"/>
                     <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end p-6 md:p-8">
                         <div>
-                            <h4 class="font-display text-lg md:text-xl font-bold text-white mb-1">Quality Assured</h4>
-                            <p class="text-xs text-white/60 font-mono tracking-wider uppercase">WHO GMP · ISO · GMP GLO Certified</p>
+                             <h4 class="font-display text-lg md:text-xl font-bold text-white mb-1">Quality Assured</h4>
+                             <p class="text-xs text-white/60 font-mono tracking-wider uppercase">WHO-GMP · ISO · GMP-GLP Certified</p>
                         </div>
                     </div>
                 </div>
