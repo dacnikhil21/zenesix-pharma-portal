@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>City Care Hospital – Final Medical Report</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: 'Segoe UI', Arial, sans-serif;
+      background: #e8e8e8;
+      display: flex;
+      justify-content: center;
+      padding: 30px 10px;
+    }
+
+    .page {
+      width: 794px;
+      background: #fff;
+      padding: 28px 36px 24px 36px;
+      box-shadow: 0 4px 24px rgba(0,0,0,0.18);
+    }
+
+    /* ── LETTERHEAD ── */
+    .letterhead {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      padding-bottom: 10px;
+      border-bottom: 2.5px solid #1a5fa8;
+    }
+
+    .letterhead-left {
+      display: flex;
+      align-items: flex-start;
+      gap: 14px;
+    }
+
+    .logo {
+      width: 68px;
+      height: 68px;
+      border-radius: 50%;
+      border: 3px solid #1a5fa8;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      background: #f0f6ff;
+    }
+
+    .logo svg { width: 40px; height: 40px; }
+
+    .hospital-name {
+      font-size: 26px;
+      font-weight: 800;
+      color: #1a3a6b;
+      letter-spacing: 0.5px;
+      line-height: 1.1;
+    }
+
+    .hospital-tagline {
+      font-size: 13px;
+      color: #1a8a5a;
+      font-weight: 600;
+      margin-top: 3px;
+    }
+
+    .hospital-address {
+      font-size: 11.5px;
+      color: #555;
+      margin-top: 5px;
+      line-height: 1.6;
+    }
+
+    .letterhead-right {
+      text-align: right;
+      font-size: 12px;
+      color: #1a3a6b;
+      line-height: 1.8;
+    }
+
+    .letterhead-right .doctor-name {
+      font-size: 15px;
+      font-weight: 700;
+      color: #1a3a6b;
+    }
+
+    .letterhead-right .reg {
+      font-size: 11px;
+      color: #555;
+    }
+
+    /* ── TIMINGS BAR ── */
+    .timings-bar {
+      background: #f0f4f8;
+      border: 1px solid #d0dce8;
+      padding: 6px 14px;
+      font-size: 11.5px;
+      color: #333;
+      margin: 10px 0;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .timings-bar span.label { font-weight: 600; color: #1a3a6b; }
+
+    /* ── PATIENT INFO TABLE ── */
+    .patient-table {
+      border: 1.5px solid #b0bec5;
+      width: 100%;
+      border-collapse: collapse;
+      margin-bottom: 12px;
+      font-size: 12.5px;
+    }
+
+    .patient-table td {
+      padding: 5px 10px;
+      border: 1px solid #cfd8dc;
+      color: #222;
+      vertical-align: top;
+    }
+
+    .patient-table td.label {
+      font-weight: 700;
+      color: #1a3a6b;
+      white-space: nowrap;
+      width: 130px;
+    }
+
+    .patient-table td.colon { width: 14px; color: #444; }
+
+    .patient-table td.value { color: #222; }
+
+    /* ── REPORT TITLE ── */
+    .report-title {
+      text-align: center;
+      font-size: 15px;
+      font-weight: 800;
+      color: #1a3a6b;
+      letter-spacing: 1.5px;
+      text-decoration: underline;
+      margin-bottom: 6px;
+      margin-top: 2px;
+    }
+
+    /* ── REPORT SECTIONS ── */
+    .report-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 12px;
+      color: #222;
+    }
+
+    .report-table tr {
+      border-bottom: 1px solid #dde3ea;
+    }
+
+    .report-table tr:last-child { border-bottom: none; }
+
+    .report-table td {
+      padding: 6px 8px;
+      vertical-align: top;
+    }
+
+    .report-table td.section-label {
+      font-weight: 700;
+      color: #1a3a6b;
+      white-space: nowrap;
+      width: 170px;
+      padding-right: 4px;
+    }
+
+    .report-table td.colon {
+      width: 10px;
+      color: #444;
+      padding: 6px 2px;
+    }
+
+    .report-table td.section-value {
+      color: #222;
+      line-height: 1.65;
+    }
+
+    .report-table ul {
+      margin: 2px 0 0 16px;
+      padding: 0;
+    }
+
+    .report-table ul li { margin-bottom: 2px; }
+
+    .report-table .findings-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1px 10px;
+    }
+
+    .report-table .findings-grid .finding-row {
+      display: flex;
+      gap: 6px;
+    }
+
+    .report-table .findings-grid .finding-label {
+      font-weight: 600;
+      min-width: 90px;
+      color: #333;
+    }
+
+    /* ── SUMMARY ROW ── */
+    .summary-row td { padding-top: 8px; padding-bottom: 8px; }
+
+    .summary-content {
+      display: flex;
+      align-items: flex-start;
+      gap: 18px;
+    }
+
+    .stamp {
+      flex-shrink: 0;
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      border: 3px solid #1a5fa8;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      font-size: 7.5px;
+      font-weight: 700;
+      color: #1a5fa8;
+      line-height: 1.4;
+      padding: 6px;
+      opacity: 0.85;
+    }
+
+    .stamp .stamp-main { font-size: 9px; font-weight: 800; }
+    .stamp .stamp-sub  { font-size: 7px; }
+
+    .summary-text { flex: 1; font-size: 12px; line-height: 1.65; color: #222; }
+
+    /* ── SIGNATURE ── */
+    .signature-block {
+      text-align: right;
+      margin-top: 10px;
+      padding-top: 6px;
+    }
+
+    .sig-line {
+      font-family: 'Segoe Script', 'Comic Sans MS', cursive;
+      font-size: 22px;
+      color: #1a3a6b;
+      line-height: 1;
+    }
+
+    .sig-name {
+      font-size: 12.5px;
+      font-weight: 700;
+      color: #1a3a6b;
+      margin-top: 2px;
+    }
+
+    .sig-credentials { font-size: 11px; color: #555; }
+
+    /* ── FOOTER NOTE ── */
+    .footer-note {
+      border-top: 1.5px solid #1a5fa8;
+      margin-top: 10px;
+      padding-top: 6px;
+      font-size: 10.5px;
+      color: #777;
+      font-style: italic;
+    }
+
+    @media print {
+      body { background: #fff; padding: 0; }
+      .page { box-shadow: none; width: 100%; padding: 20px 30px; }
+    }
+  </style>
+</head>
+<body>
+<div class="page">
+
+  <!-- LETTERHEAD -->
+  <div class="letterhead">
+    <div class="letterhead-left">
+      <div class="logo">
+        <svg viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="25" cy="25" r="23" stroke="#1a5fa8" stroke-width="2.5" fill="#eef4ff"/>
+          <rect x="22" y="10" width="6" height="30" rx="2" fill="#1a5fa8"/>
+          <rect x="10" y="22" width="30" height="6" rx="2" fill="#1a5fa8"/>
+        </svg>
+      </div>
+      <div>
+        <div class="hospital-name">CITY CARE HOSPITAL</div>
+        <div class="hospital-tagline">Multi Speciality &amp; General Medicine</div>
+        <div class="hospital-address">
+          Plot No. 7, Rajendra Nagar, Banjara Hills,<br>
+          Hyderabad – 500034, Telangana.
+        </div>
+      </div>
+    </div>
+    <div class="letterhead-right">
+      <div class="doctor-name">Dr. R. SHARMA</div>
+      <div>MBBS, MD (General Medicine)</div>
+      <div class="reg">Reg. No. TSMC/GMR/45821</div>
+      <div>&#9990; 040 – 2345 6789</div>
+      <div>&#9993; +91 98765 43210</div>
+    </div>
+  </div>
+
+  <!-- TIMINGS BAR -->
+  <div class="timings-bar">
+    <span>&#128336;</span>
+    <span class="label">Consultation Timings :</span>
+    Monday to Saturday – 9:00 AM to 2:00 PM &nbsp;|&nbsp; 5:00 PM to 9:00 PM
+    &nbsp;&nbsp;&nbsp; Sunday – 10:00 AM to 1:00 PM
+  </div>
+
+  <!-- PATIENT INFO TABLE -->
+  <table class="patient-table">
+    <tr>
+      <td class="label">Patient Name</td>
+      <td class="colon">:</td>
+      <td class="value">D. Nikhil</td>
+      <td class="label">Patient ID</td>
+      <td class="colon">:</td>
+      <td class="value">CCH/26-27/8741</td>
+    </tr>
+    <tr>
+      <td class="label">Age / Gender</td>
+      <td class="colon">:</td>
+      <td class="value">23 Years / Male</td>
+      <td class="label">Date of Consultation</td>
+      <td class="colon">:</td>
+      <td class="value">08-05-2026</td>
+    </tr>
+    <tr>
+      <td class="label">Address</td>
+      <td class="colon">:</td>
+      <td class="value">LB Nagar, Hyderabad,<br>Telangana – 500074</td>
+      <td class="label">Report Date</td>
+      <td class="colon">:</td>
+      <td class="value">30-05-2026</td>
+    </tr>
+  </table>
+
+  <!-- REPORT TITLE -->
+  <div class="report-title">FINAL MEDICAL REPORT</div>
+
+  <!-- REPORT SECTIONS -->
+  <table class="report-table">
+    <tr>
+      <td class="section-label">Chief Complaint</td>
+      <td class="colon">:</td>
+      <td class="section-value">Severe high-grade step-ladder fever with chills, generalised weakness, complete loss of appetite, persistent nausea, abdominal discomfort and clinical dehydration.</td>
+    </tr>
+    <tr>
+      <td class="section-label">History</td>
+      <td class="colon">:</td>
+      <td class="section-value">
+        Patient reported acute onset of high-grade fever 5 days prior to admission with a progressive step-ladder fever pattern over the first week.<br>
+        Associated symptoms included profuse sweating, persistent nausea, significant loss of appetite and severe generalised weakness.<br>
+        Patient has been under continuous inpatient treatment for 22 days.
+      </td>
+    </tr>
+    <tr>
+      <td class="section-label">Duration of Illness</td>
+      <td class="colon">:</td>
+      <td class="section-value">22 Days</td>
+    </tr>
+    <tr>
+      <td class="section-label">Duration of Treatment</td>
+      <td class="colon">:</td>
+      <td class="section-value">
+        22 Days (from 08-05-2026 to 30-05-2026)<br>
+        (Inpatient treatment completed. Discharged with oral medications.)
+      </td>
+    </tr>
+    <tr>
+      <td class="section-label">Severity</td>
+      <td class="colon">:</td>
+      <td class="section-value">
+        Initially severe — High-grade fever with marked dehydration. Blood culture confirmed Salmonella Typhi.<br>
+        Significant clinical improvement noted by Day 14.<br>
+        Patient stable and afebrile at discharge.
+      </td>
+    </tr>
+    <tr>
+      <td class="section-label">Clinical Findings</td>
+      <td class="colon">:</td>
+      <td class="section-value">
+        <ul>
+          <li><strong>Pulse &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</strong>: 100 /min (Admission) &nbsp;→&nbsp; 78 /min (Discharge)</li>
+          <li><strong>BP &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</strong>: 100/60 mmHg (Admission) &nbsp;→&nbsp; 118/74 mmHg (Discharge)</li>
+          <li><strong>Temperature</strong>: 104°F (Admission) &nbsp;→&nbsp; 98.4°F (Discharge)</li>
+          <li><strong>SpO2 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</strong>: 96% (stable throughout admission)</li>
+          <li><strong>Hydration &nbsp;</strong>: Severely dehydrated (Day 1) → Fully hydrated (Day 22)</li>
+          <li><strong>Abdomen &nbsp;&nbsp;</strong>: Mild tenderness over right iliac fossa (fully resolved at discharge)</li>
+        </ul>
+      </td>
+    </tr>
+    <tr>
+      <td class="section-label">Diagnosis</td>
+      <td class="colon">:</td>
+      <td class="section-value">
+        Enteric Fever (Typhoid Fever) — Confirmed by Blood Culture (Salmonella Typhi isolated on Day 3).<br>
+        Secondary acute dehydration. No multi-drug resistance detected.
+      </td>
+    </tr>
+    <tr>
+      <td class="section-label">Treatment Given</td>
+      <td class="colon">:</td>
+      <td class="section-value">
+        <ul>
+          <li>IV Fluids and Electrolytes (DNS / NS continuous infusion)</li>
+          <li>Inj. Ceftriaxone 2g IV once daily (10-day course)</li>
+          <li>Tab. Cefixime 200mg (oral step-down from Day 11)</li>
+          <li>Tab. Pantoprazole 40mg for gastric protection</li>
+          <li>Syrup Multivitamin and Zinc supplementation</li>
+          <li>Soft bland dietary protocol throughout admission</li>
+        </ul>
+      </td>
+    </tr>
+    <tr>
+      <td class="section-label">Investigation (If Any)</td>
+      <td class="colon">:</td>
+      <td class="section-value">
+        CBC – Haemoglobin 11.2 g/dL (Low), WBC 3800 /µL (Low), CRP 42.5 mg/L (High) on Day 1.<br>
+        Blood Culture – Positive for Salmonella Typhi (Day 3).<br>
+        Widal Test – Positive (O and H titres elevated, confirming Typhoid).<br>
+        Stool Routine – Normal. No infection detected in stool.<br>
+        LFT – SGOT/AST mildly elevated 68 U/L; normalised by Day 15.
+      </td>
+    </tr>
+    <tr>
+      <td class="section-label">Current Status</td>
+      <td class="colon">:</td>
+      <td class="section-value">
+        Patient has completed 22 days of inpatient treatment. Clinically stable and afebrile for 48 hours prior to discharge.<br>
+        Appetite fully restored. All inflammatory markers trending to normal range.<br>
+        Blood culture clearance confirmed on follow-up. <strong>Patient is clinically recovered and fit for discharge.</strong><br>
+        Advised outpatient follow-up in 7 days for repeat CBC and LFT.
+      </td>
+    </tr>
+    <tr>
+      <td class="section-label">Doctor's Advice</td>
+      <td class="colon">:</td>
+      <td class="section-value">
+        <ol style="margin-left:16px; line-height:1.8;">
+          <li>Continue oral Cefixime 200mg twice daily for 7 more days.</li>
+          <li>Take plenty of oral fluids and maintain soft bland diet.</li>
+          <li>Avoid raw, outside, oily and spicy food for at least 2 weeks.</li>
+          <li>Complete the full antibiotic course without interruption.</li>
+          <li>Follow up after 7 days for repeat CBC and Liver Function Test.</li>
+          <li>Return immediately if fever recurs or symptoms worsen.</li>
+        </ol>
+      </td>
+    </tr>
+    <tr class="summary-row">
+      <td class="section-label">Summary</td>
+      <td class="colon">:</td>
+      <td class="section-value">
+        <div class="summary-content">
+          <div class="stamp">
+            <div class="stamp-main">CITY CARE</div>
+            <div class="stamp-sub">HOSPITAL</div>
+            <div style="border-top:1px solid #1a5fa8;width:60%;margin:3px auto;"></div>
+            <div class="stamp-sub">HYD – 500034</div>
+            <div class="stamp-sub">TELANGANA</div>
+          </div>
+          <div class="summary-text">
+            The patient was admitted with confirmed Enteric Fever (Typhoid Fever) with secondary acute dehydration.
+            Blood culture confirmed Salmonella Typhi on Day 3. A 22-day inpatient treatment protocol including
+            IV Ceftriaxone 2g and aggressive fluid resuscitation resulted in complete clinical recovery.
+            Inflammatory markers normalised. Fever resolved by Day 20. Patient discharged in stable and afebrile
+            condition with oral antibiotics. Outpatient follow-up in 7 days is advised.
+          </div>
+        </div>
+      </td>
+    </tr>
+  </table>
+
+  <!-- SIGNATURE -->
+  <div class="signature-block">
+    <div class="sig-line">R. Sharma</div>
+    <div class="sig-name">Dr. R. Sharma</div>
+    <div class="sig-credentials">MBBS, MD (General Medicine)</div>
+  </div>
+
+  <!-- FOOTER -->
+  <div class="footer-note">
+    Note: This report is for medical purpose only.
+  </div>
+
+</div>
+</body>
+</html>
