@@ -1,0 +1,15 @@
+﻿# robots.txt â€” Zenesix Pharmaceuticals
+# Allows all search engine crawlers to index the full site.
+# IMPORTANT: Replace https://zenesixpharmaceuticals.com with your actual live domain.
+
+User-agent: *
+Allow: /
+
+# Block any sensitive or build-related paths
+Disallow: /node_modules/
+Disallow: /dist/
+Disallow: /.git/
+
+# Sitemap location â€” submit this URL in Google Search Console â†’ Sitemaps
+Sitemap: https://zenesixpharmaceuticals.com/sitemap.xml
+
